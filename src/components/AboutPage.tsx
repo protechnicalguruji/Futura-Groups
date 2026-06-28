@@ -16,7 +16,7 @@ export default function AboutPage() {
 
             {/* Story */}
             <section className="px-8 py-16 bg-white">
-                <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                     <div>
                         <h2 className="text-4xl font-display font-bold text-primary mb-6">Our Journey</h2>
                         <p className="text-gray-600 mb-6">Established with a vision to create landmarks, Elite Real Estate has been transforming skylines for over 15 years.</p>
@@ -30,7 +30,7 @@ export default function AboutPage() {
 
             {/* Mission & Vision */}
             <section className="px-8 py-16">
-                <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="bg-[#F8F6F2] p-10 rounded-[32px] border border-white shadow-lg">
                         <Target className="text-accent mb-6" size={48} />
                         <h3 className="text-3xl font-bold text-primary mb-4">Our Mission</h3>
@@ -48,7 +48,7 @@ export default function AboutPage() {
             <section className="px-8 py-16 bg-white">
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-4xl font-display font-bold text-primary mb-12 text-center">Why Choose Us</h2>
-                    <div className="grid md:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                         {["Verified Projects", "RERA Approved", "Trusted Developers", "Expert Consultants", "Transparent Pricing", "High ROI"].map(item => (
                             <div key={item} className="p-8 bg-[#F8F6F2] rounded-[24px] border border-white shadow-lg text-center">
                                 <CheckCircle className="text-accent mx-auto mb-4" />
