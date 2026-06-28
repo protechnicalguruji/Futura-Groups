@@ -51,9 +51,9 @@ export default function ContactPage() {
             </section>
 
             {/* Contact Info & Form */}
-            <section className="px-6 md:px-8 py-12 md:py-16 lg:py-12 bg-white">
+            <section className="px-6 md:px-8 py-12 md:py-16 lg:py-12 bg-background">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 lg:gap-12">
-                    <form id="contact-form" onSubmit={handleSubmit} className="space-y-4 md:space-y-6 bg-[#F8F6F2] p-5 md:p-10 lg:p-8 rounded-[32px] border border-white shadow-lg">
+                    <form id="contact-form" onSubmit={handleSubmit} className="space-y-4 md:space-y-6 bg-surface p-5 md:p-10 lg:p-8 rounded-[32px] border border-white shadow-lg">
                         <h3 className="text-2xl md:text-3xl lg:text-2xl font-bold">Send us a Message</h3>
                         <div className="space-y-1">
                             <input type="text" placeholder="Full Name" value={formData.fullName} onChange={e => setFormData({...formData, fullName: e.target.value})} className={`w-full p-3 md:p-4 border ${errors.fullName ? 'border-red-500' : 'border-gray-200'} rounded-2xl text-sm md:text-base`} />
@@ -84,15 +84,15 @@ export default function ContactPage() {
                     
                     <div className="space-y-6 md:space-y-8">
                         <h3 className="text-2xl md:text-3xl font-bold">Get In Touch</h3>
-                        <div className="flex items-start gap-3 md:gap-4 p-5 md:p-6 bg-[#F8F6F2] rounded-[24px] shadow-lg">
+                        <div className="flex items-start gap-3 md:gap-4 p-5 md:p-6 bg-surface rounded-[24px] shadow-lg">
                             <MapPin className="text-accent mt-1 w-5 h-5 md:w-6 md:h-6" /> 
                             <div><h4 className="font-bold text-sm md:text-base">Our Office</h4><p className="text-xs md:text-sm text-gray-600">Nagawara Main Road, Bengaluru North, Karnataka</p></div>
                         </div>
-                        <div className="flex items-start gap-3 md:gap-4 p-5 md:p-6 bg-[#F8F6F2] rounded-[24px] shadow-lg">
+                        <div className="flex items-start gap-3 md:gap-4 p-5 md:p-6 bg-surface rounded-[24px] shadow-lg">
                             <Phone className="text-accent mt-1 w-5 h-5 md:w-6 md:h-6" /> 
                             <div><h4 className="font-bold text-sm md:text-base">Call Us</h4><a href="tel:+918884544588" className="text-xs md:text-sm text-gray-600 hover:text-primary">+91 88845 44588</a></div>
                         </div>
-                        <div className="flex items-start gap-3 md:gap-4 p-5 md:p-6 bg-[#F8F6F2] rounded-[24px] shadow-lg">
+                        <div className="flex items-start gap-3 md:gap-4 p-5 md:p-6 bg-surface rounded-[24px] shadow-lg">
                             <Clock className="text-accent mt-1 w-5 h-5 md:w-6 md:h-6" /> 
                             <div><h4 className="font-bold text-sm md:text-base">Operating Since</h4><p className="text-xs md:text-sm text-gray-600">2000 (Serving Trust)</p></div>
                         </div>

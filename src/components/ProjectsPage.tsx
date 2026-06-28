@@ -40,7 +40,7 @@ export default function ProjectsPage({ onSelect, compareList, onToggleCompare }:
                 {filtered.map(p => {
                     const isCompared = compareList.some(item => item.id === p.id);
                     return (
-                        <div key={p.id} className="group bg-[#F8F6F2] rounded-[28px] shadow-lg overflow-hidden border border-white">
+                        <div key={p.id} className="group bg-surface rounded-[28px] shadow-lg overflow-hidden border border-white">
                             <div className="h-64 lg:h-56 overflow-hidden relative">
                                 <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
                                 <button 

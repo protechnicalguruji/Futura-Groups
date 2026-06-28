@@ -16,7 +16,25 @@
 }
 
 @layer base {
+  :root {
+    --color-primary: #0B1F33;
+    --color-secondary: #163D6B;
+    --color-accent: #D4AF37;
+    --color-background: #F8FAFC;
+    --color-text: #111827;
+    --color-surface: #F8F6F2;
+  }
+
+  .dark {
+    --color-primary: #D4AF37;
+    --color-secondary: #0B1F33;
+    --color-accent: #D4AF37;
+    --color-background: #0B1F33;
+    --color-text: #F8FAFC;
+    --color-surface: #112B44;
+  }
+
   html, body {
-    @apply overflow-x-hidden w-full max-w-full;
+    @apply overflow-x-hidden w-full max-w-full bg-background text-text transition-colors duration-500;
   }
 }

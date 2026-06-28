@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion } from "motion/react";
 import { User, Phone, Mail, Building, Wallet, MessageSquare } from "lucide-react";
 

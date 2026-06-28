@@ -10,7 +10,7 @@ export default function MapSection() {
             <h2 className="text-4xl font-display font-bold text-primary">Visit Our Corporate Office</h2>
             <div className="flex items-center gap-4 text-gray-600"><MapPin /> 123 Luxury Avenue, Business District</div>
             <div className="flex items-center gap-4 text-gray-600"><Phone /> +91 99999 99999</div>
-            <div className="flex items-center gap-4 text-gray-600"><Mail /> contact@eliteestates.com</div>
+            <div className="flex items-center gap-4 text-gray-600"><Mail /> contact@futuragroups.com</div>
             <div className="flex items-center gap-4 text-gray-600"><Clock /> 10:00 AM - 7:00 PM</div>
         </div>
       </div>

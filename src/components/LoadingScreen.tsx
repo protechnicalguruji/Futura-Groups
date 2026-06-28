@@ -8,8 +8,9 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
   }, [onComplete]);
 
   return (
-    <motion.div initial={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[100] bg-primary flex items-center justify-center">
-      <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="font-display text-5xl font-bold text-accent">ELITE</motion.div>
+    <motion.div initial={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[100] bg-primary flex flex-col items-center justify-center">
+      <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="font-display text-4xl md:text-5xl font-bold text-accent mb-4">FUTURA GROUPS</motion.div>
+      <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.2 }} className="font-sans text-white/60 tracking-[0.2em] text-xs md:text-sm uppercase">Where Trust Meets Tomorrow</motion.div>
     </motion.div>
   );
 }

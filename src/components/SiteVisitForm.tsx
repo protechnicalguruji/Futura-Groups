@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 export default function SiteVisitForm() {
   return (
-    <section className="py-12 md:py-24 bg-white">
+    <section className="py-12 md:py-24 bg-surface">
       <div className="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
         <div>
             <h2 className="text-2xl md:text-5xl font-display font-bold text-primary mb-4 md:mb-6 leading-tight">Schedule Your Exclusive Site Visit</h2>

@@ -32,7 +32,7 @@ export default function InvestmentPage({ onSelect, compareList, onToggleCompare 
             {filtered.map(p => {
                 const isCompared = compareList.some(item => item.id === p.id);
                 return (
-                    <div key={p.id} className="group bg-white rounded-[28px] shadow-sm overflow-hidden border border-gray-100">
+                    <div key={p.id} className="group bg-surface rounded-[28px] shadow-sm overflow-hidden border border-gray-100 dark:border-white/10">
                         <div className="h-48 md:h-64 lg:h-56 overflow-hidden relative">
                             <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
                             <button 

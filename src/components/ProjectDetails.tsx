@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { User, Phone, Mail, Calendar, Clock, MessageSquare, ArrowLeft } from "lucide-react";
 import { projects } from "../data";
@@ -49,7 +49,7 @@ Please contact me regarding this project.`;
                     </div>
                 </div>
             </div>
-            <form onSubmit={handleSubmit} className="bg-white p-5 md:p-8 rounded-[28px] border border-gray-100 shadow-xl space-y-3 md:space-y-4">
+            <form onSubmit={handleSubmit} className="bg-surface p-5 md:p-8 rounded-[28px] border border-gray-100 dark:border-white/10 shadow-xl space-y-3 md:space-y-4">
                 <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Schedule a Call</h3>
                 <input type="text" placeholder="Full Name" className="w-full p-3 md:p-4 rounded-[18px] border border-gray-200 text-sm md:text-base" onChange={e => setFormData({...formData, name: e.target.value})} required />
                 <input type="text" placeholder="Phone Number" className="w-full p-3 md:p-4 rounded-[18px] border border-gray-200 text-sm md:text-base" onChange={e => setFormData({...formData, phone: e.target.value})} required />
@@ -64,7 +64,7 @@ Please contact me regarding this project.`;
             </div>
             <div className="mt-12 md:mt-16 space-y-12 md:space-y-16">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                <div className="bg-white p-6 md:p-8 rounded-[28px] border border-gray-100 shadow-sm">
+                <div className="bg-surface p-6 md:p-8 rounded-[28px] border border-gray-100 dark:border-white/10 shadow-sm">
                     <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Contact Agent</h3>
                     <div className="h-20 w-20 md:h-24 md:w-24 overflow-hidden rounded-full mb-4">
                         <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80" alt="Agent" className="w-full h-full object-cover" />
@@ -95,7 +95,7 @@ Please contact me regarding this project.`;
                 <h3 className="text-xl md:text-2xl font-bold mb-6 md:mb-8">Suggested Properties</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                     {suggested.map(p => (
-                        <div key={p.id} className="bg-white rounded-[28px] shadow-sm overflow-hidden border border-gray-100">
+                        <div key={p.id} className="bg-surface rounded-[28px] shadow-sm overflow-hidden border border-gray-100 dark:border-white/10">
                           <div className="h-48 md:h-64 overflow-hidden">
                             <img src={p.image} alt={p.name} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy" />
                           </div>

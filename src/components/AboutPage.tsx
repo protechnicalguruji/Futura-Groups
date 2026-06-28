@@ -15,7 +15,7 @@ export default function AboutPage() {
             </section>
 
             {/* Story */}
-            <section className="px-6 md:px-8 py-12 md:py-16 lg:py-12 bg-white">
+            <section className="px-6 md:px-8 py-12 md:py-16 lg:py-12 bg-background">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-12 items-center">
                     <div>
                         <h2 className="text-2xl md:text-4xl lg:text-3xl font-display font-bold text-primary mb-4 md:mb-6 leading-tight">Our Journey</h2>
@@ -23,7 +23,7 @@ export default function AboutPage() {
                         <p className="text-sm md:text-base lg:text-sm text-gray-600 leading-relaxed">Our commitment to integrity and a trust-based approach defines everything we do, serving both B2B and B2C clients through a diversified portfolio.</p>
                     </div>
                     <div className="h-64 md:h-96 lg:h-80 overflow-hidden rounded-[32px] md:rounded-[40px]">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80" alt="About Elite" className="w-full h-full object-cover" />
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80" alt="About Futura Groups" className="w-full h-full object-cover" />
                     </div>
                 </div>
             </section>
@@ -31,12 +31,12 @@ export default function AboutPage() {
             {/* Mission & Vision */}
             <section className="px-6 md:px-8 py-12 md:py-16">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                    <div className="bg-[#F8F6F2] p-6 md:p-10 rounded-[32px] border border-white shadow-lg">
+                    <div className="bg-surface p-6 md:p-10 rounded-[32px] border border-white shadow-lg">
                         <Target className="text-accent mb-4 md:mb-6 w-10 h-10 md:w-12 md:h-12" />
                         <h3 className="text-xl md:text-3xl font-bold text-primary mb-3 md:mb-4">Our Mission</h3>
                         <p className="text-sm md:text-base text-gray-600 leading-relaxed">To deliver trusted real estate solutions and provide expert guidance for informed long-term property investments.</p>
                     </div>
-                    <div className="bg-[#F8F6F2] p-6 md:p-10 rounded-[32px] border border-white shadow-lg">
+                    <div className="bg-surface p-6 md:p-10 rounded-[32px] border border-white shadow-lg">
                         <Zap className="text-accent mb-4 md:mb-6 w-10 h-10 md:w-12 md:h-12" />
                         <h3 className="text-xl md:text-3xl font-bold text-primary mb-3 md:mb-4">Our Vision</h3>
                         <p className="text-sm md:text-base text-gray-600 leading-relaxed">To be the leading name in real estate and hospitality, where trust meets tomorrow through excellence and innovation.</p>
@@ -45,12 +45,12 @@ export default function AboutPage() {
             </section>
 
             {/* Why Choose Us */}
-            <section className="px-6 md:px-8 py-12 md:py-16 bg-white">
+            <section className="px-6 md:px-8 py-12 md:py-16 bg-background">
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-2xl md:text-4xl font-display font-bold text-primary mb-8 md:mb-12 text-center">Our Strengths</h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                         {["Premium Branding", "Diversified Services", "Trust-Based Approach", "B2B & B2C Expertise", "Investment Guidance", "Operating Since 2000"].map(item => (
-                            <div key={item} className="p-5 md:p-8 bg-[#F8F6F2] rounded-[24px] border border-white shadow-lg text-center">
+                            <div key={item} className="p-5 md:p-8 bg-surface rounded-[24px] border border-white shadow-lg text-center">
                                 <CheckCircle className="text-accent mx-auto mb-3 md:mb-4 w-5 h-5 md:w-6 md:h-6" />
                                 <h4 className="font-bold text-sm md:text-base">{item}</h4>
                             </div>

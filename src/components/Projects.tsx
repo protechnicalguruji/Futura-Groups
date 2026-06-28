@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { projects } from "../data";
+import { Check, Plus } from "lucide-react";
 
 const categories = ["All", "Luxury Apartments", "Villas", "Commercial", "Plots"];
 
@@ -24,7 +25,7 @@ export default function Projects({ onSelect, onNavigate, compareList, onToggleCo
             {filtered.map((p) => {
               const isCompared = compareList.some(item => item.id === p.id);
               return (
-                <motion.div key={p.id} layout initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} className="group bg-[#F8F6F2] rounded-[28px] shadow-lg hover:shadow-2xl transition-all overflow-hidden border border-white">
+                <motion.div key={p.id} layout initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} className="group bg-surface rounded-[28px] shadow-lg hover:shadow-2xl transition-all overflow-hidden border border-white">
                   <div className="h-48 md:h-64 lg:h-56 overflow-hidden relative">
                       <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
                       <button 

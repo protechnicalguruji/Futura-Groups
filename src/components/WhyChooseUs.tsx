@@ -32,7 +32,7 @@ export default function WhyChooseUs() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -10 }}
-              className="bg-[#F8F6F2] p-6 md:p-8 lg:p-6 rounded-[28px] border border-white shadow-lg hover:shadow-2xl transition-all"
+              className="bg-surface p-6 md:p-8 lg:p-6 rounded-[28px] border border-white shadow-lg hover:shadow-2xl transition-all"
             >
               <div className="w-12 h-12 md:w-14 md:h-14 bg-primary/5 text-primary rounded-2xl flex items-center justify-center mb-4 md:mb-6">
                 <item.icon size={26} className="md:w-7 md:h-7" />
