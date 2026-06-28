@@ -1,0 +1,6 @@
+{
+  "name": "Elite Estates",
+  "description": "A luxury real estate agency website featuring modern design and premium experience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

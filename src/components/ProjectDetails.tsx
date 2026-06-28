@@ -1,0 +1,117 @@
+import { useState, useEffect } from "react";
+import { motion } from "motion/react";
+import { User, Phone, Mail, Calendar, Clock, MessageSquare, ArrowLeft } from "lucide-react";
+import { projects } from "../data";
+
+export default function ProjectDetails({ project, onBack, onSelect }: { project: any; onBack: () => void; onSelect: (p: any) => void }) {
+  const [formData, setFormData] = useState({ name: "", phone: "", email: "", date: "", time: "", message: "" });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [project]);
+
+  const suggested = projects.filter(p => p.id !== project.id).slice(0, 3);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name || !/^[6-9]\d{9}$/.test(formData.phone)) return;
+    
+    const msg = `Hello,
+I am interested in this property.
+Project: ${project.name}
+Name: ${formData.name}
+Phone: ${formData.phone}
+Email: ${formData.email}
+Preferred Date: ${formData.date}
+Preferred Time: ${formData.time}
+Message: ${formData.message}
+Please contact me regarding this project.`;
+    window.open(`https://wa.me/917224935780?text=${encodeURIComponent(msg)}`, '_blank');
+  };
+
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="pt-24 bg-background min-h-screen">
+      <button onClick={onBack} className="fixed top-28 left-8 z-50 flex items-center gap-2 bg-white p-3 rounded-full shadow-md"><ArrowLeft size={20} /> Back</button>
+      <div className="max-w-7xl mx-auto px-8 py-16">
+        <h1 className="text-6xl font-display font-bold text-primary mb-4">{project.name}</h1>
+        <p className="text-xl text-gray-500 mb-8">{project.location} | {project.price}</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="md:col-span-2">
+                <div className="h-96 bg-gray-200 rounded-[28px] mb-8" />
+                <div className="grid grid-cols-2 gap-4">
+                    <div className="h-48 bg-gray-200 rounded-[28px]" />
+                    <div className="h-48 bg-gray-200 rounded-[28px]" />
+                </div>
+            </div>
+            <form onSubmit={handleSubmit} className="bg-white p-8 rounded-[28px] border border-gray-100 shadow-sm space-y-4">
+                <h3 className="text-2xl font-bold mb-6">Schedule a Call</h3>
+                <input type="text" placeholder="Full Name" className="w-full p-4 rounded-[18px] border border-gray-200" onChange={e => setFormData({...formData, name: e.target.value})} required />
+                <input type="text" placeholder="Phone Number" className="w-full p-4 rounded-[18px] border border-gray-200" onChange={e => setFormData({...formData, phone: e.target.value})} required />
+                <input type="email" placeholder="Email Address" className="w-full p-4 rounded-[18px] border border-gray-200" onChange={e => setFormData({...formData, email: e.target.value})} />
+                <div className="flex gap-4">
+                    <input type="date" className="w-full p-4 rounded-[18px] border border-gray-200" onChange={e => setFormData({...formData, date: e.target.value})} />
+                    <input type="time" className="w-full p-4 rounded-[18px] border border-gray-200" onChange={e => setFormData({...formData, time: e.target.value})} />
+                </div>
+                <textarea placeholder="Message" className="w-full p-4 rounded-[18px] border border-gray-200" onChange={e => setFormData({...formData, message: e.target.value})} />
+                <button className="w-full p-4 bg-primary text-white rounded-[18px] font-bold hover:bg-secondary">Schedule Call</button>
+            </form>
+            </div>
+            <div className="mt-16 space-y-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="bg-white p-8 rounded-[28px] border border-gray-100 shadow-sm">
+                    <h3 className="text-2xl font-bold mb-6">Contact Agent</h3>
+                    <div className="h-24 w-24 bg-gray-200 rounded-full mb-4" />
+                    <div className="font-bold text-xl">John Agent</div>
+                    <div className="text-gray-500 mb-6">Property Consultant</div>
+                    <a href="tel:+917224935780" className="block w-full p-3 mb-2 bg-primary text-white rounded-[18px] font-bold text-center">Call Now</a>
+                    <a href="https://wa.me/917224935780?text=Hello, I am interested in this property. Please contact me." className="block w-full p-3 bg-accent text-primary rounded-[18px] font-bold text-center">WhatsApp</a>
+                </div>
+                <div className="md:col-span-2 bg-white p-8 rounded-[28px] border border-gray-100 shadow-sm">
+                    <h3 className="text-2xl font-bold mb-6">Property Information</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        {["Type", "Price", "Config", "Area", "Floors", "Status"].map(label => (
+                            <div key={label} className="p-4 bg-background rounded-[18px]"><div className="text-sm text-gray-500">{label}</div><div className="font-bold">Value</div></div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 className="text-2xl font-bold mb-8">Premium Amenities</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {["Club House", "Pool", "Gym", "Garden"].map(item => (
+                        <div key={item} className="p-6 bg-white rounded-[24px] border border-gray-100 shadow-sm text-center font-bold text-primary">{item}</div>
+                    ))}
+                </div>
+            </div>
+            <div>
+                <h3 className="text-2xl font-bold mb-8">Suggested Properties</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {suggested.map(p => (
+                        <div key={p.id} className="bg-white rounded-[28px] shadow-sm overflow-hidden border border-gray-100">
+                          <div className="h-64 bg-gray-200" />
+                          <div className="p-6">
+                            <h3 className="text-2xl font-bold text-primary">{p.name}</h3>
+                            <p className="text-gray-500 mb-4">{p.location}</p>
+                            <div className="text-xl font-bold text-accent mb-6">{p.price}</div>
+                            <div className="flex gap-4">
+                              <button onClick={() => onSelect(p)} className="flex-1 px-4 py-3 border border-primary text-primary rounded-[18px] font-bold hover:bg-primary hover:text-white transition-all text-center">Details</button>
+                              <a href="tel:+917224935780" className="flex-1 px-4 py-3 bg-primary text-white rounded-[18px] font-bold text-center hover:bg-secondary">Call Now</a>
+                            </div>
+                          </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div className="bg-primary text-white p-16 rounded-[40px] text-center">
+                <h3 className="text-4xl font-bold mb-6">Need Expert Guidance?</h3>
+                <p className="mb-10 text-gray-300">Talk to our experts for personalized advice.</p>
+                <div className="flex gap-4 justify-center">
+                    <button className="px-8 py-4 bg-accent text-primary rounded-[18px] font-bold">Schedule Call</button>
+                    <button className="px-8 py-4 bg-white/10 text-white rounded-[18px] font-bold">Call Now</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}

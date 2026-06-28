@@ -1,0 +1,8 @@
+export const projects = [
+  { id: 1, name: "Skyline Residences", location: "South Mumbai", category: "Luxury Apartments", price: "₹ 15 Cr+", priceVal: 15, configuration: "3 BHK", area: "2500 sqft", status: "Ready", image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" },
+  { id: 2, name: "The Emerald Villas", location: "Alibaug", category: "Villas", price: "₹ 8 Cr+", priceVal: 8, configuration: "4 BHK", area: "4000 sqft", status: "Ready", image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80" },
+  { id: 3, name: "Oceanic Towers", location: "Juhu", category: "Luxury Apartments", price: "₹ 20 Cr+", priceVal: 20, configuration: "3 BHK", area: "2800 sqft", status: "Under Construction", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" },
+  { id: 4, name: "Business Hub Alpha", location: "BKC", category: "Commercial", price: "₹ 50 Cr+", priceVal: 50, configuration: "Office", area: "10000 sqft", status: "Ready", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" },
+  { id: 5, name: "Coastal Estates", location: "Goa", category: "Plots", price: "₹ 3 Cr+", priceVal: 3, configuration: "Plot", area: "5000 sqft", status: "Ready", image: "https://images.unsplash.com/photo-1507038772120-7d762e8f16ad?auto=format&fit=crop&w=800&q=80" },
+  { id: 6, name: "Urban Penthouse", location: "Worli", category: "Luxury Apartments", price: "₹ 25 Cr+", priceVal: 25, configuration: "5 BHK", area: "5000 sqft", status: "Under Construction", image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" },
+];

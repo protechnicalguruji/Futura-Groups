@@ -1,0 +1,17 @@
+import { motion } from "motion/react";
+
+export default function CTA() {
+  return (
+    <section className="py-24 px-8">
+      <div className="max-w-7xl mx-auto bg-primary rounded-[40px] p-16 text-center text-white relative overflow-hidden">
+        <div className="relative z-10">
+            <h2 className="text-6xl font-display font-bold mb-8">Ready to Elevate Your Lifestyle?</h2>
+            <div className="flex justify-center gap-6">
+                <button className="px-10 py-5 bg-accent text-primary rounded-[18px] font-bold text-lg hover:scale-105 transition-all">Explore Projects</button>
+                <button className="px-10 py-5 bg-white/10 border border-white/20 text-white rounded-[18px] font-bold text-lg hover:bg-white/20 transition-all">Schedule Consultation</button>
+            </div>
+        </div>
+      </div>
+    </section>
+  );
+}
