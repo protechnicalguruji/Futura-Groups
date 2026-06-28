@@ -37,65 +37,65 @@ Please contact me regarding this project.`;
         <p className="text-lg md:text-xl text-gray-500 mb-8">{project.location} | {project.price}</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="md:col-span-2">
-                <div className="h-96 bg-gray-200 rounded-[28px] mb-8" />
-                <div className="grid grid-cols-2 gap-4">
-                    <div className="h-48 bg-gray-200 rounded-[28px]" />
-                    <div className="h-48 bg-gray-200 rounded-[28px]" />
+                <div className="h-64 md:h-96 bg-gray-200 rounded-[24px] md:rounded-[28px] mb-4 md:mb-8" />
+                <div className="grid grid-cols-2 gap-3 md:gap-4">
+                    <div className="h-32 md:h-48 bg-gray-200 rounded-[24px] md:rounded-[28px]" />
+                    <div className="h-32 md:h-48 bg-gray-200 rounded-[24px] md:rounded-[28px]" />
                 </div>
             </div>
-            <form onSubmit={handleSubmit} className="bg-white p-6 md:p-8 rounded-[28px] border border-gray-100 shadow-xl space-y-4">
-                <h3 className="text-2xl font-bold mb-6">Schedule a Call</h3>
-                <input type="text" placeholder="Full Name" className="w-full p-4 rounded-[18px] border border-gray-200" onChange={e => setFormData({...formData, name: e.target.value})} required />
-                <input type="text" placeholder="Phone Number" className="w-full p-4 rounded-[18px] border border-gray-200" onChange={e => setFormData({...formData, phone: e.target.value})} required />
-                <input type="email" placeholder="Email Address" className="w-full p-4 rounded-[18px] border border-gray-200" onChange={e => setFormData({...formData, email: e.target.value})} />
-                <div className="flex gap-4">
-                    <input type="date" className="w-full p-4 rounded-[18px] border border-gray-200" onChange={e => setFormData({...formData, date: e.target.value})} />
-                    <input type="time" className="w-full p-4 rounded-[18px] border border-gray-200" onChange={e => setFormData({...formData, time: e.target.value})} />
+            <form onSubmit={handleSubmit} className="bg-white p-5 md:p-8 rounded-[28px] border border-gray-100 shadow-xl space-y-3 md:space-y-4">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Schedule a Call</h3>
+                <input type="text" placeholder="Full Name" className="w-full p-3 md:p-4 rounded-[18px] border border-gray-200 text-sm md:text-base" onChange={e => setFormData({...formData, name: e.target.value})} required />
+                <input type="text" placeholder="Phone Number" className="w-full p-3 md:p-4 rounded-[18px] border border-gray-200 text-sm md:text-base" onChange={e => setFormData({...formData, phone: e.target.value})} required />
+                <input type="email" placeholder="Email Address" className="w-full p-3 md:p-4 rounded-[18px] border border-gray-200 text-sm md:text-base" onChange={e => setFormData({...formData, email: e.target.value})} />
+                <div className="flex gap-3 md:gap-4">
+                    <input type="date" className="w-full p-3 md:p-4 rounded-[18px] border border-gray-200 text-sm md:text-base" onChange={e => setFormData({...formData, date: e.target.value})} />
+                    <input type="time" className="w-full p-3 md:p-4 rounded-[18px] border border-gray-200 text-sm md:text-base" onChange={e => setFormData({...formData, time: e.target.value})} />
                 </div>
-                <textarea placeholder="Message" className="w-full p-4 rounded-[18px] border border-gray-200" onChange={e => setFormData({...formData, message: e.target.value})} />
-                <button className="w-full p-4 bg-primary text-white rounded-[18px] font-bold hover:bg-secondary">Schedule Call</button>
+                <textarea placeholder="Message" className="w-full p-3 md:p-4 rounded-[18px] border border-gray-200 text-sm md:text-base" onChange={e => setFormData({...formData, message: e.target.value})} />
+                <button className="w-full p-3 md:p-4 bg-primary text-white rounded-[18px] font-bold hover:bg-secondary text-sm md:text-base">Schedule Call</button>
             </form>
             </div>
-            <div className="mt-16 space-y-16">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="bg-white p-8 rounded-[28px] border border-gray-100 shadow-sm">
-                    <h3 className="text-2xl font-bold mb-6">Contact Agent</h3>
-                    <div className="h-24 w-24 bg-gray-200 rounded-full mb-4" />
-                    <div className="font-bold text-xl">John Agent</div>
-                    <div className="text-gray-500 mb-6">Property Consultant</div>
-                    <a href="tel:+917224935780" className="block w-full p-3 mb-2 bg-primary text-white rounded-[18px] font-bold text-center">Call Now</a>
-                    <a href="https://wa.me/917224935780?text=Hello, I am interested in this property. Please contact me." className="block w-full p-3 bg-accent text-primary rounded-[18px] font-bold text-center">WhatsApp</a>
+            <div className="mt-12 md:mt-16 space-y-12 md:space-y-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <div className="bg-white p-6 md:p-8 rounded-[28px] border border-gray-100 shadow-sm">
+                    <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Contact Agent</h3>
+                    <div className="h-20 w-20 md:h-24 md:w-24 bg-gray-200 rounded-full mb-4" />
+                    <div className="font-bold text-lg md:text-xl">John Agent</div>
+                    <div className="text-xs md:text-sm text-gray-500 mb-4 md:mb-6">Property Consultant</div>
+                    <a href="tel:+917224935780" className="block w-full p-3 mb-2 bg-primary text-white rounded-[18px] font-bold text-center text-sm md:text-base">Call Now</a>
+                    <a href="https://wa.me/917224935780?text=Hello, I am interested in this property. Please contact me." className="block w-full p-3 bg-accent text-primary rounded-[18px] font-bold text-center text-sm md:text-base">WhatsApp</a>
                 </div>
-                <div className="md:col-span-2 bg-white p-8 rounded-[28px] border border-gray-100 shadow-sm">
-                    <h3 className="text-2xl font-bold mb-6">Property Information</h3>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div className="md:col-span-2 bg-white p-6 md:p-8 rounded-[28px] border border-gray-100 shadow-sm">
+                    <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Property Information</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
                         {["Type", "Price", "Config", "Area", "Floors", "Status"].map(label => (
-                            <div key={label} className="p-4 bg-background rounded-[18px]"><div className="text-sm text-gray-500">{label}</div><div className="font-bold">Value</div></div>
+                            <div key={label} className="p-3 md:p-4 bg-background rounded-[18px]"><div className="text-xs md:text-sm text-gray-500">{label}</div><div className="font-bold text-sm md:text-base">Value</div></div>
                         ))}
                     </div>
                 </div>
             </div>
             <div>
-                <h3 className="text-2xl font-bold mb-8">Premium Amenities</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <h3 className="text-xl md:text-2xl font-bold mb-6 md:mb-8">Premium Amenities</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
                     {["Club House", "Pool", "Gym", "Garden"].map(item => (
-                        <div key={item} className="p-6 bg-white rounded-[24px] border border-gray-100 shadow-sm text-center font-bold text-primary">{item}</div>
+                        <div key={item} className="p-4 md:p-6 bg-white rounded-[24px] border border-gray-100 shadow-sm text-center font-bold text-primary text-sm md:text-base">{item}</div>
                     ))}
                 </div>
             </div>
             <div>
-                <h3 className="text-2xl font-bold mb-8">Suggested Properties</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <h3 className="text-xl md:text-2xl font-bold mb-6 md:mb-8">Suggested Properties</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                     {suggested.map(p => (
                         <div key={p.id} className="bg-white rounded-[28px] shadow-sm overflow-hidden border border-gray-100">
-                          <div className="h-64 bg-gray-200" />
-                          <div className="p-6">
-                            <h3 className="text-2xl font-bold text-primary">{p.name}</h3>
-                            <p className="text-gray-500 mb-4">{p.location}</p>
-                            <div className="text-xl font-bold text-accent mb-6">{p.price}</div>
-                            <div className="flex gap-4">
-                              <button onClick={() => onSelect(p)} className="flex-1 px-4 py-3 border border-primary text-primary rounded-[18px] font-bold hover:bg-primary hover:text-white transition-all text-center">Details</button>
-                              <a href="tel:+917224935780" className="flex-1 px-4 py-3 bg-primary text-white rounded-[18px] font-bold text-center hover:bg-secondary">Call Now</a>
+                          <div className="h-48 md:h-64 bg-gray-200" />
+                          <div className="p-5 md:p-6">
+                            <h3 className="text-xl md:text-2xl font-bold text-primary leading-tight">{p.name}</h3>
+                            <p className="text-sm md:text-base text-gray-500 mb-4">{p.location}</p>
+                            <div className="text-lg md:text-xl font-bold text-accent mb-4 md:mb-6">{p.price}</div>
+                            <div className="flex gap-3 md:gap-4">
+                              <button onClick={() => onSelect(p)} className="flex-1 px-3 md:px-4 py-2.5 md:py-3 border border-primary text-primary rounded-[18px] font-bold hover:bg-primary hover:text-white transition-all text-center text-xs md:text-base">Details</button>
+                              <a href="tel:+917224935780" className="flex-1 px-3 md:px-4 py-2.5 md:py-3 bg-primary text-white rounded-[18px] font-bold text-center hover:bg-secondary text-xs md:text-base">Call Now</a>
                             </div>
                           </div>
                         </div>

@@ -15,44 +15,44 @@ export default function AboutPage() {
             </section>
 
             {/* Story */}
-            <section className="px-8 py-16 bg-white">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <section className="px-6 md:px-8 py-12 md:py-16 bg-white">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
                     <div>
-                        <h2 className="text-4xl font-display font-bold text-primary mb-6">Our Journey</h2>
-                        <p className="text-gray-600 mb-6">Established with a vision to create landmarks, Elite Real Estate has been transforming skylines for over 15 years.</p>
-                        <p className="text-gray-600">Our commitment to transparency, quality, and customer-centricity defines us.</p>
+                        <h2 className="text-2xl md:text-4xl font-display font-bold text-primary mb-4 md:mb-6 leading-tight">Our Journey</h2>
+                        <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6 leading-relaxed">Established with a vision to create landmarks, Elite Real Estate has been transforming skylines for over 15 years.</p>
+                        <p className="text-sm md:text-base text-gray-600 leading-relaxed">Our commitment to transparency, quality, and customer-centricity defines us.</p>
                     </div>
-                    <div className="h-96 overflow-hidden rounded-[40px]">
+                    <div className="h-64 md:h-96 overflow-hidden rounded-[32px] md:rounded-[40px]">
                         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80" alt="About Elite" className="w-full h-full object-cover" />
                     </div>
                 </div>
             </section>
 
             {/* Mission & Vision */}
-            <section className="px-8 py-16">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="bg-[#F8F6F2] p-10 rounded-[32px] border border-white shadow-lg">
-                        <Target className="text-accent mb-6" size={48} />
-                        <h3 className="text-3xl font-bold text-primary mb-4">Our Mission</h3>
-                        <p className="text-gray-600">To deliver exceptional real estate experiences through innovation and integrity.</p>
+            <section className="px-6 md:px-8 py-12 md:py-16">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                    <div className="bg-[#F8F6F2] p-6 md:p-10 rounded-[32px] border border-white shadow-lg">
+                        <Target className="text-accent mb-4 md:mb-6 w-10 h-10 md:w-12 md:h-12" />
+                        <h3 className="text-xl md:text-3xl font-bold text-primary mb-3 md:mb-4">Our Mission</h3>
+                        <p className="text-sm md:text-base text-gray-600 leading-relaxed">To deliver exceptional real estate experiences through innovation and integrity.</p>
                     </div>
-                    <div className="bg-[#F8F6F2] p-10 rounded-[32px] border border-white shadow-lg">
-                        <Zap className="text-accent mb-6" size={48} />
-                        <h3 className="text-3xl font-bold text-primary mb-4">Our Vision</h3>
-                        <p className="text-gray-600">To be the most trusted name in luxury real estate globally.</p>
+                    <div className="bg-[#F8F6F2] p-6 md:p-10 rounded-[32px] border border-white shadow-lg">
+                        <Zap className="text-accent mb-4 md:mb-6 w-10 h-10 md:w-12 md:h-12" />
+                        <h3 className="text-xl md:text-3xl font-bold text-primary mb-3 md:mb-4">Our Vision</h3>
+                        <p className="text-sm md:text-base text-gray-600 leading-relaxed">To be the most trusted name in luxury real estate globally.</p>
                     </div>
                 </div>
             </section>
 
             {/* Why Choose Us */}
-            <section className="px-8 py-16 bg-white">
+            <section className="px-6 md:px-8 py-12 md:py-16 bg-white">
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-4xl font-display font-bold text-primary mb-12 text-center">Why Choose Us</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <h2 className="text-2xl md:text-4xl font-display font-bold text-primary mb-8 md:mb-12 text-center">Why Choose Us</h2>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                         {["Verified Projects", "RERA Approved", "Trusted Developers", "Expert Consultants", "Transparent Pricing", "High ROI"].map(item => (
-                            <div key={item} className="p-8 bg-[#F8F6F2] rounded-[24px] border border-white shadow-lg text-center">
-                                <CheckCircle className="text-accent mx-auto mb-4" />
-                                <h4 className="font-bold">{item}</h4>
+                            <div key={item} className="p-5 md:p-8 bg-[#F8F6F2] rounded-[24px] border border-white shadow-lg text-center">
+                                <CheckCircle className="text-accent mx-auto mb-3 md:mb-4 w-5 h-5 md:w-6 md:h-6" />
+                                <h4 className="font-bold text-sm md:text-base">{item}</h4>
                             </div>
                         ))}
                     </div>

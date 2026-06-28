@@ -9,9 +9,9 @@ export default function Navbar({ onNavigate }: { onNavigate: (page: string, scro
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="fixed top-5 left-1/2 -translate-x-1/2 w-[92%] h-[76px] z-50 flex items-center justify-between px-8 bg-white/60 backdrop-blur-md border border-white/40 rounded-full shadow-lg"
+      className="fixed top-3 md:top-5 left-1/2 -translate-x-1/2 w-[92%] h-[60px] md:h-[76px] z-50 flex items-center justify-between px-6 md:px-8 bg-white/60 backdrop-blur-md border border-white/40 rounded-full shadow-lg"
     >
-      <div className="font-display text-2xl font-bold text-primary cursor-pointer" onClick={() => onNavigate('home')}>ELITE</div>
+      <div className="font-display text-xl md:text-2xl font-bold text-primary cursor-pointer" onClick={() => onNavigate('home')}>ELITE</div>
       <div className="hidden md:flex gap-4 lg:gap-8 font-sans font-medium text-primary">
         {["Home", "Projects", "Services", "About", "Contact", "Investment"].map((item) => (
           <button key={item} onClick={() => onNavigate(item.toLowerCase())} className="hover:text-accent transition-colors whitespace-nowrap">
@@ -27,8 +27,8 @@ export default function Navbar({ onNavigate }: { onNavigate: (page: string, scro
           <CalendarDays size={18} /> Book
         </a>
       </div>
-      <button className="md:hidden text-primary" onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? <X /> : <Menu />}
+      <button className="md:hidden text-primary p-2" onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? <X size={20} /> : <Menu size={20} />}
       </button>
 
       <AnimatePresence>
@@ -37,19 +37,19 @@ export default function Navbar({ onNavigate }: { onNavigate: (page: string, scro
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-20 left-0 w-full bg-white/90 backdrop-blur-lg border border-white/40 rounded-[28px] shadow-2xl p-6 md:hidden flex flex-col gap-4"
+            className="absolute top-16 md:top-20 left-0 w-full bg-white/95 backdrop-blur-lg border border-white/40 rounded-[28px] shadow-2xl p-5 md:hidden flex flex-col gap-3"
           >
             {["Home", "Projects", "Services", "About", "Contact", "Investment"].map((item) => (
-              <button key={item} onClick={() => { onNavigate(item.toLowerCase()); setIsOpen(false); }} className="text-left font-bold text-primary hover:text-accent py-2 border-b border-gray-100 last:border-0">
+              <button key={item} onClick={() => { onNavigate(item.toLowerCase()); setIsOpen(false); }} className="text-left font-bold text-primary hover:text-accent py-2.5 border-b border-gray-100 last:border-0 text-sm md:text-base">
                 {item}
               </button>
             ))}
-            <div className="flex flex-col gap-3 mt-4">
-                <a href="tel:+917224935780" className="flex items-center justify-center gap-2 px-6 py-4 bg-primary text-white rounded-[18px] font-bold">
-                    <Phone size={18} /> Call Us
+            <div className="flex flex-col gap-2 mt-2">
+                <a href="tel:+917224935780" className="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white rounded-[18px] font-bold text-sm">
+                    <Phone size={16} /> Call Us
                 </a>
-                <a href="https://wa.me/917224935780" target="_blank" className="flex items-center justify-center gap-2 px-6 py-4 bg-accent text-primary rounded-[18px] font-bold">
-                    <CalendarDays size={18} /> Book Visit
+                <a href="https://wa.me/917224935780" target="_blank" className="flex items-center justify-center gap-2 px-6 py-3 bg-accent text-primary rounded-[18px] font-bold text-sm">
+                    <CalendarDays size={16} /> Book Visit
                 </a>
             </div>
           </motion.div>
