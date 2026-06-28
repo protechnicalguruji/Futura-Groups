@@ -1,7 +1,10 @@
-import { motion } from "motion/react";
-import { Phone, MessageCircle, CalendarDays } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { Phone, MessageCircle, CalendarDays, Menu, X } from "lucide-react";
 
 export default function Navbar({ onNavigate }: { onNavigate: (page: string, scrollToId?: string) => void }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
@@ -16,7 +19,7 @@ export default function Navbar({ onNavigate }: { onNavigate: (page: string, scro
           </button>
         ))}
       </div>
-      <div className="flex gap-4">
+      <div className="hidden md:flex gap-4">
         <a href="tel:+917224935780" aria-label="Call Us" className="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-[18px] font-sans font-medium hover:bg-secondary transition-all hover:scale-105 shadow-md">
           <Phone size={18} /> Call
         </a>
@@ -24,6 +27,26 @@ export default function Navbar({ onNavigate }: { onNavigate: (page: string, scro
           <CalendarDays size={18} /> Book
         </a>
       </div>
+      <button className="md:hidden text-primary" onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? <X /> : <Menu />}
+      </button>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="absolute top-20 left-0 w-full bg-white/90 backdrop-blur-lg border border-white/40 rounded-[28px] shadow-2xl p-6 md:hidden flex flex-col gap-4"
+          >
+            {["Home", "Projects", "Services", "About", "Contact", "Investment"].map((item) => (
+              <button key={item} onClick={() => { onNavigate(item.toLowerCase()); setIsOpen(false); }} className="text-left font-bold text-primary hover:text-accent">
+                {item}
+              </button>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 }

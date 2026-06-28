@@ -17,7 +17,7 @@ export default function FAQ() {
             <div className="max-w-3xl mx-auto px-8">
                 <h2 className="text-5xl font-display font-bold text-primary mb-16 text-center">Frequently Asked Questions</h2>
                 {faqs.map((f, i) => (
-                    <div key={i} className="mb-4 bg-white p-6 rounded-[24px] border border-gray-100 shadow-sm cursor-pointer" onClick={() => setOpen(open === i ? null : i)}>
+                    <motion.div key={i} whileHover={{ y: -5 }} className="mb-4 bg-[#F8F6F2] p-6 rounded-[24px] border border-white shadow-lg cursor-pointer hover:shadow-xl transition-all" onClick={() => setOpen(open === i ? null : i)}>
                         <div className="flex justify-between items-center font-bold text-primary">
                             {f.q}
                             <ChevronDown className={`transition-transform ${open === i ? "rotate-180" : ""}`} />
@@ -25,7 +25,7 @@ export default function FAQ() {
                         <AnimatePresence>
                             {open === i && <motion.div initial={{ height: 0 }} animate={{ height: "auto" }} exit={{ height: 0 }} className="overflow-hidden text-gray-600 mt-2">{f.a}</motion.div>}
                         </AnimatePresence>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </section>

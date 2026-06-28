@@ -10,7 +10,7 @@ export default function Hero({ onNavigate }: { onNavigate: (page: string, scroll
       <div className="relative z-20 flex flex-col md:flex-row justify-between w-full max-w-7xl mx-auto">
         <div className="md:w-1/2 flex flex-col justify-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-accent font-sans font-semibold mb-4 tracking-wider uppercase">Luxury Living Since 2012</motion.div>
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="font-display text-7xl md:text-8xl font-bold leading-tight mb-6">
+          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="font-display text-5xl md:text-8xl font-bold leading-tight mb-6">
             Redefining <span className="text-accent">Opulence</span> in Every Detail.
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="text-xl text-gray-200 mb-8 max-w-lg">

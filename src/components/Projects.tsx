@@ -22,7 +22,7 @@ export default function Projects({ onSelect, onNavigate }: { onSelect: (p: any) 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <AnimatePresence mode="popLayout">
             {filtered.map((p) => (
-              <motion.div key={p.id} layout initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} className="bg-white rounded-[28px] shadow-sm hover:shadow-xl transition-all overflow-hidden border border-gray-100">
+              <motion.div key={p.id} layout initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} className="bg-[#F8F6F2] rounded-[28px] shadow-lg hover:shadow-2xl transition-all overflow-hidden border border-white">
                 <div className="h-64 overflow-hidden">
                     <img src={p.image} alt={p.name} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy" />
                 </div>

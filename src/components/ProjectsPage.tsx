@@ -36,7 +36,7 @@ export default function ProjectsPage({ onSelect }: { onSelect: (p: any) => void 
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {filtered.map(p => (
-                    <div key={p.id} className="bg-white rounded-[28px] shadow-sm overflow-hidden border border-gray-100">
+                    <div key={p.id} className="bg-[#F8F6F2] rounded-[28px] shadow-lg overflow-hidden border border-white">
                         <div className="h-64 overflow-hidden">
                             <img src={p.image} alt={p.name} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy" />
                         </div>

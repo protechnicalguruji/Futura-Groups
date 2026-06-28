@@ -45,7 +45,7 @@ Please contact me regarding available properties.`;
       animate={{ opacity: 1, scale: 1 }} 
       transition={{ delay: 0.8 }} 
       onSubmit={handleSubmit}
-      className="hidden md:block md:w-[450px] mt-20 bg-white/10 backdrop-blur-xl border border-white/20 rounded-[28px] p-8 space-y-4"
+      className="w-full md:w-[450px] mt-10 md:mt-20 bg-white/10 backdrop-blur-xl border border-white/20 rounded-[28px] p-6 md:p-8 space-y-4"
     >
       <h3 className="text-2xl font-bold mb-1">Get in Touch</h3>
       <p className="text-sm text-gray-200 mb-6">Fill in your details and our team will contact you shortly on WhatsApp.</p>

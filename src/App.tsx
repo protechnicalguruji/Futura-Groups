@@ -11,7 +11,6 @@ import Stats from "./components/Stats";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Projects from "./components/Projects";
 import Services from "./components/Services";
-import Investment from "./components/Investment";
 import Process from "./components/Process";
 import Testimonials from "./components/Testimonials";
 import Partners from "./components/Partners";
@@ -78,7 +77,6 @@ export default function App() {
               <WhyChooseUs />
               <Projects onSelect={setSelectedProject} onNavigate={handleNavigate} />
               <Services />
-              <Investment />
               <Process />
               <Testimonials />
               <Partners />

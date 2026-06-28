@@ -41,15 +41,19 @@ export default function ContactPage() {
     return (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="pt-32 pb-20 bg-background">
             {/* Hero */}
-            <section className="px-8 pb-16 text-center">
-                <h1 className="text-7xl font-display font-bold text-primary mb-6">Contact Us</h1>
-                <p className="text-xl text-gray-500 max-w-2xl mx-auto">Get in touch for expert real estate guidance and personalized property solutions.</p>
+            <section className="relative px-8 pb-16 h-[400px] flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center" />
+                <div className="absolute inset-0 bg-black/40" />
+                <div className="relative text-center text-white">
+                    <h1 className="text-7xl font-display font-bold mb-6">Contact Us</h1>
+                    <p className="text-xl max-w-2xl mx-auto">Get in touch for expert real estate guidance and personalized property solutions.</p>
+                </div>
             </section>
 
             {/* Contact Info & Form */}
             <section className="px-8 py-16 bg-white">
                 <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
-                    <form id="contact-form" onSubmit={handleSubmit} className="space-y-6 bg-background p-10 rounded-[32px] border border-gray-100">
+                    <form id="contact-form" onSubmit={handleSubmit} className="space-y-6 bg-[#F8F6F2] p-10 rounded-[32px] border border-white shadow-lg">
                         <h3 className="text-3xl font-bold">Send us a Message</h3>
                         <div className="space-y-1">
                             <input type="text" placeholder="Full Name" value={formData.fullName} onChange={e => setFormData({...formData, fullName: e.target.value})} className={`w-full p-4 border ${errors.fullName ? 'border-red-500' : 'border-gray-200'} rounded-2xl`} />
@@ -80,18 +84,32 @@ export default function ContactPage() {
                     
                     <div className="space-y-8">
                         <h3 className="text-3xl font-bold">Get In Touch</h3>
-                        <div className="flex items-start gap-4 p-6 bg-background rounded-[24px]">
+                        <div className="flex items-start gap-4 p-6 bg-[#F8F6F2] rounded-[24px] shadow-lg">
                             <MapPin className="text-accent mt-1" /> 
                             <div><h4 className="font-bold">Our Office</h4><p className="text-gray-600">123, Luxury Avenue, Mumbai</p></div>
                         </div>
-                        <div className="flex items-start gap-4 p-6 bg-background rounded-[24px]">
+                        <div className="flex items-start gap-4 p-6 bg-[#F8F6F2] rounded-[24px] shadow-lg">
                             <Phone className="text-accent mt-1" /> 
                             <div><h4 className="font-bold">Call Us</h4><a href="tel:+917224935780" className="text-gray-600 hover:text-primary">+91 7224935780</a></div>
                         </div>
-                        <div className="flex items-start gap-4 p-6 bg-background rounded-[24px]">
+                        <div className="flex items-start gap-4 p-6 bg-[#F8F6F2] rounded-[24px] shadow-lg">
                             <Clock className="text-accent mt-1" /> 
                             <div><h4 className="font-bold">Working Hours</h4><p className="text-gray-600">Mon - Sat: 9 AM - 8 PM</p></div>
                         </div>
+                    </div>
+                </div>
+            </section>
+            
+            {/* Gallery */}
+            <section className="px-8 py-16">
+                <div className="max-w-7xl mx-auto">
+                    <h3 className="text-4xl font-bold mb-10">Our Office</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                        {[1, 2, 3, 4, 5, 6].map(i => (
+                            <div key={i} className="h-64 rounded-[24px] overflow-hidden">
+                                <img src={`https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80`} alt="Office" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
