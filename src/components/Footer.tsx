@@ -2,11 +2,11 @@ import { Instagram, Linkedin, Twitter, Facebook } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white py-12 md:py-20 px-6 md:px-8">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
-        <div className="space-y-4 md:space-y-6">
-          <div className="font-display text-2xl md:text-3xl font-bold text-accent">FUTURA GROUPS</div>
-          <p className="text-sm md:text-base text-gray-400">Where Trust Meets Tomorrow. Delivering trusted real estate solutions since 2000.</p>
+    <footer className="bg-primary text-white py-12 lg:py-16 px-6 md:px-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 lg:gap-8">
+        <div className="space-y-4 md:space-y-6 lg:space-y-4">
+          <div className="font-display text-2xl md:text-3xl lg:text-2xl font-bold text-accent">FUTURA GROUPS</div>
+          <p className="text-sm md:text-base lg:text-sm text-gray-400">Where Trust Meets Tomorrow. Delivering trusted real estate solutions since 2000.</p>
           <div className="flex gap-4">
             <Instagram size={18} className="hover:text-accent cursor-pointer" />
             <Linkedin size={18} className="hover:text-accent cursor-pointer" />

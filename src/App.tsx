@@ -81,7 +81,7 @@ export default function App() {
               <Testimonials />
               <Partners />
               <Achievements />
-              <CTA />
+              <CTA onNavigate={handleNavigate} />
               <Calculators />
               <LocationAdvantages />
               <SiteVisitForm />

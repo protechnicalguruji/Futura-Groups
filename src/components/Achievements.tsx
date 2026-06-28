@@ -27,12 +27,12 @@ const stats = [
 
 export default function Achievements() {
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+    <section className="py-12 md:py-24 lg:py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-6">
         {stats.map((s, i) => (
-            <div key={i} className="bg-background p-8 rounded-[28px] border border-gray-100 text-center">
-                <div className="text-4xl font-bold text-primary mb-2"><Counter value={s.value} />{s.suffix}</div>
-                <div className="text-gray-500 font-sans">{s.label}</div>
+            <div key={i} className="bg-background p-8 lg:p-6 rounded-[28px] border border-gray-100 text-center">
+                <div className="text-4xl lg:text-3xl font-bold text-primary mb-2"><Counter value={s.value} />{s.suffix}</div>
+                <div className="text-gray-500 lg:text-sm font-sans">{s.label}</div>
             </div>
         ))}
       </div>

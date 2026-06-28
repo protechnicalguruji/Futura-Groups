@@ -51,10 +51,10 @@ export default function ContactPage() {
             </section>
 
             {/* Contact Info & Form */}
-            <section className="px-6 md:px-8 py-12 md:py-16 bg-white">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
-                    <form id="contact-form" onSubmit={handleSubmit} className="space-y-4 md:space-y-6 bg-[#F8F6F2] p-5 md:p-10 rounded-[32px] border border-white shadow-lg">
-                        <h3 className="text-2xl md:text-3xl font-bold">Send us a Message</h3>
+            <section className="px-6 md:px-8 py-12 md:py-16 lg:py-12 bg-white">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 lg:gap-12">
+                    <form id="contact-form" onSubmit={handleSubmit} className="space-y-4 md:space-y-6 bg-[#F8F6F2] p-5 md:p-10 lg:p-8 rounded-[32px] border border-white shadow-lg">
+                        <h3 className="text-2xl md:text-3xl lg:text-2xl font-bold">Send us a Message</h3>
                         <div className="space-y-1">
                             <input type="text" placeholder="Full Name" value={formData.fullName} onChange={e => setFormData({...formData, fullName: e.target.value})} className={`w-full p-3 md:p-4 border ${errors.fullName ? 'border-red-500' : 'border-gray-200'} rounded-2xl text-sm md:text-base`} />
                             {errors.fullName && <p className="text-red-500 text-xs">{errors.fullName}</p>}

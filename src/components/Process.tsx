@@ -4,9 +4,9 @@ const steps = ["Discover", "Consult", "Visit", "Choose", "Book", "Own"];
 
 export default function Process() {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-12 md:py-24 lg:py-16 bg-background">
       <div className="max-w-7xl mx-auto px-8">
-        <h2 className="text-5xl font-display font-bold text-primary mb-16 text-center">Our Process</h2>
+        <h2 className="text-3xl md:text-5xl lg:text-4xl font-display font-bold text-primary mb-10 md:mb-16 lg:mb-12 text-center">Our Process</h2>
         <div className="relative flex flex-col md:flex-row justify-between items-center gap-8">
             <div className="absolute top-1/2 left-0 right-0 h-1 bg-gray-200 hidden md:block -z-0" />
             {steps.map((step, i) => (

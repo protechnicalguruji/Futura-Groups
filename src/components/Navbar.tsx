@@ -9,22 +9,22 @@ export default function Navbar({ onNavigate }: { onNavigate: (page: string, scro
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="fixed top-3 md:top-5 left-1/2 -translate-x-1/2 w-[92%] h-[60px] md:h-[76px] z-50 flex items-center justify-between px-6 md:px-8 bg-white/60 backdrop-blur-md border border-white/40 rounded-full shadow-lg"
+      className="fixed top-3 md:top-5 left-1/2 -translate-x-1/2 w-[92%] h-[60px] md:h-[76px] lg:h-[68px] z-50 flex items-center justify-between px-6 md:px-8 lg:px-6 bg-white/60 backdrop-blur-md border border-white/40 rounded-full shadow-lg"
     >
-      <div className="font-display text-xl md:text-2xl font-bold text-primary cursor-pointer" onClick={() => onNavigate('home')}>FUTURA GROUPS</div>
-      <div className="hidden md:flex gap-4 lg:gap-8 font-sans font-medium text-primary">
+      <div className="font-display text-xl md:text-2xl lg:text-xl font-bold text-primary cursor-pointer" onClick={() => onNavigate('home')}>FUTURA GROUPS</div>
+      <div className="hidden md:flex gap-4 lg:gap-6 font-sans font-medium text-primary lg:text-sm">
         {["Home", "Projects", "Services", "About", "Contact", "Investment"].map((item) => (
           <button key={item} onClick={() => onNavigate(item.toLowerCase())} className="hover:text-accent transition-colors whitespace-nowrap">
             {item}
           </button>
         ))}
       </div>
-      <div className="hidden md:flex gap-4">
-        <a href="tel:+918884544588" aria-label="Call Us" className="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-[18px] font-sans font-medium hover:bg-secondary transition-all hover:scale-105 shadow-md">
-          <Phone size={18} /> Call
+      <div className="hidden md:flex gap-4 lg:gap-3">
+        <a href="tel:+918884544588" aria-label="Call Us" className="flex items-center gap-2 px-6 py-3 lg:px-5 lg:py-2.5 bg-primary text-white rounded-[18px] font-sans font-medium hover:bg-secondary transition-all hover:scale-105 shadow-md lg:text-sm">
+          <Phone size={18} className="lg:w-4 lg:h-4" /> Call
         </a>
-        <a href="https://wa.me/918884544588?text=Hello Futura Groups, I am interested in your real estate services. Please contact me." target="_blank" aria-label="Book a consultation" className="flex items-center gap-2 px-6 py-3 bg-accent text-primary rounded-[18px] font-sans font-medium hover:bg-opacity-90 transition-all hover:scale-105 shadow-md">
-          <CalendarDays size={18} /> Book
+        <a href="https://wa.me/918884544588?text=Hello Futura Groups, I am interested in your real estate services. Please contact me." target="_blank" aria-label="Book a consultation" className="flex items-center gap-2 px-6 py-3 lg:px-5 lg:py-2.5 bg-accent text-primary rounded-[18px] font-sans font-medium hover:bg-opacity-90 transition-all hover:scale-105 shadow-md lg:text-sm">
+          <CalendarDays size={18} className="lg:w-4 lg:h-4" /> Book
         </a>
       </div>
       <button className="md:hidden text-primary p-2" onClick={() => setIsOpen(!isOpen)}>

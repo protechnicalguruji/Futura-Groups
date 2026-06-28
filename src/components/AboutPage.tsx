@@ -9,20 +9,20 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center" />
                 <div className="absolute inset-0 bg-black/40" />
                 <div className="relative max-w-7xl mx-auto text-center text-white px-4">
-                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold mb-6">About Futura Groups</h1>
-                    <p className="text-lg md:text-xl max-w-2xl mx-auto">Where Trust Meets Tomorrow. Delivering trusted real estate and property solutions since 2000.</p>
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-5xl font-display font-bold mb-6">About Futura Groups</h1>
+                    <p className="text-lg md:text-xl lg:text-lg max-w-2xl mx-auto">Where Trust Meets Tomorrow. Delivering trusted real estate and property solutions since 2000.</p>
                 </div>
             </section>
 
             {/* Story */}
-            <section className="px-6 md:px-8 py-12 md:py-16 bg-white">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+            <section className="px-6 md:px-8 py-12 md:py-16 lg:py-12 bg-white">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-12 items-center">
                     <div>
-                        <h2 className="text-2xl md:text-4xl font-display font-bold text-primary mb-4 md:mb-6 leading-tight">Our Journey</h2>
-                        <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6 leading-relaxed">Operating since 2000, Futura Groups has been a pillar of trust in the Bengaluru real estate market. We focus on delivering trusted real estate solutions while helping clients make informed long-term property investment decisions.</p>
-                        <p className="text-sm md:text-base text-gray-600 leading-relaxed">Our commitment to integrity and a trust-based approach defines everything we do, serving both B2B and B2C clients through a diversified portfolio.</p>
+                        <h2 className="text-2xl md:text-4xl lg:text-3xl font-display font-bold text-primary mb-4 md:mb-6 leading-tight">Our Journey</h2>
+                        <p className="text-sm md:text-base lg:text-sm text-gray-600 mb-4 md:mb-6 leading-relaxed">Operating since 2000, Futura Groups has been a pillar of trust in the Bengaluru real estate market. We focus on delivering trusted real estate solutions while helping clients make informed long-term property investment decisions.</p>
+                        <p className="text-sm md:text-base lg:text-sm text-gray-600 leading-relaxed">Our commitment to integrity and a trust-based approach defines everything we do, serving both B2B and B2C clients through a diversified portfolio.</p>
                     </div>
-                    <div className="h-64 md:h-96 overflow-hidden rounded-[32px] md:rounded-[40px]">
+                    <div className="h-64 md:h-96 lg:h-80 overflow-hidden rounded-[32px] md:rounded-[40px]">
                         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80" alt="About Elite" className="w-full h-full object-cover" />
                     </div>
                 </div>
