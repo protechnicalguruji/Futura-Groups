@@ -10,12 +10,12 @@ export default function Hero({ onNavigate }: { onNavigate: (page: string, scroll
       <div className="relative z-20 flex flex-col justify-center w-full max-w-7xl mx-auto py-8 md:py-0">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-16">
           <div className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left items-center md:items-start">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-accent font-sans font-semibold mb-3 md:mb-4 tracking-wider uppercase text-xs md:text-base">Luxury Living Since 2012</motion.div>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-accent font-sans font-semibold mb-3 md:mb-4 tracking-wider uppercase text-xs md:text-base">Where Trust Meets Tomorrow</motion.div>
             <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="font-display text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-4 md:mb-6">
-              Redefining <span className="text-accent">Opulence</span> in Every Detail.
+              Trusted Real Estate <span className="text-accent">Solutions</span> for Your Future.
             </motion.h1>
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="text-base md:text-xl text-gray-200 mb-6 md:mb-8 max-w-lg">
-              Experience unparalleled sophistication and architectural mastery in the most prestigious locations.
+              Helping you make informed long-term property investment decisions in Bengaluru since 2000.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="flex flex-wrap justify-center md:justify-start gap-3 md:gap-4">
               <button onClick={() => onNavigate('projects')} aria-label="Explore our projects" className="px-5 md:px-8 py-2.5 md:py-4 bg-accent text-primary rounded-[18px] font-sans font-bold hover:bg-white transition-all text-xs md:text-base">Explore Projects</button>

@@ -5,8 +5,8 @@ export default function Footer() {
     <footer className="bg-primary text-white py-12 md:py-20 px-6 md:px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
         <div className="space-y-4 md:space-y-6">
-          <div className="font-display text-2xl md:text-3xl font-bold text-accent">ELITE</div>
-          <p className="text-sm md:text-base text-gray-400">Crafting premium living experiences since 2012. Redefining opulence, one project at a time.</p>
+          <div className="font-display text-2xl md:text-3xl font-bold text-accent">FUTURA GROUPS</div>
+          <p className="text-sm md:text-base text-gray-400">Where Trust Meets Tomorrow. Delivering trusted real estate solutions since 2000.</p>
           <div className="flex gap-4">
             <Instagram size={18} className="hover:text-accent cursor-pointer" />
             <Linkedin size={18} className="hover:text-accent cursor-pointer" />
@@ -21,23 +21,22 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <h4 className="font-bold text-lg md:text-xl mb-4 md:mb-6">Featured Projects</h4>
+          <h4 className="font-bold text-lg md:text-xl mb-4 md:mb-6">Featured Services</h4>
           <ul className="space-y-2 md:space-y-4 text-sm md:text-base text-gray-400">
-            {["Luxury Apartments", "Premium Villas", "Commercial Spaces", "Plots"].map(link => <li key={link} className="hover:text-accent cursor-pointer">{link}</li>)}
+            {["Premium Land Parcels", "Residential Properties", "Commercial Leasing", "Property Management"].map(link => <li key={link} className="hover:text-accent cursor-pointer">{link}</li>)}
           </ul>
         </div>
         <div>
           <h4 className="font-bold text-lg md:text-xl mb-4 md:mb-6">Contact</h4>
           <ul className="space-y-2 md:space-y-4 text-sm md:text-base text-gray-400">
-            <li>123 Luxury Avenue, Business District</li>
-            <li>+91 99999 99999</li>
-            <li>contact@eliteestates.com</li>
-            <li>10:00 AM - 7:00 PM</li>
+            <li>Nagawara Main Road, Bengaluru North, Karnataka</li>
+            <li>+91 88845 44588</li>
+            <li>Operating Since 2000</li>
           </ul>
         </div>
       </div>
       <div className="max-w-7xl mx-auto mt-12 md:mt-16 pt-8 border-t border-white/10 text-center text-gray-500 text-xs">
-        © 2026 Elite Estates. All Rights Reserved. Designed with elegance.
+        © 2026 Futura Groups. All Rights Reserved. Where Trust Meets Tomorrow.
       </div>
     </footer>
   );

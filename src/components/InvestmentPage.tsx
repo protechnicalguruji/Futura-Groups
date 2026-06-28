@@ -36,7 +36,7 @@ export default function InvestmentPage({ onSelect }: { onSelect: (p: any) => voi
                         <div className="text-lg md:text-xl font-bold text-accent mb-4 md:mb-6">{p.price}</div>
                         <div className="flex gap-3 md:gap-4">
                             <button onClick={() => onSelect(p)} className="flex-1 px-3 md:px-4 py-2.5 md:py-3 border border-primary text-primary rounded-[18px] font-bold text-xs md:text-base">Details</button>
-                            <a href="tel:+917224935780" className="flex-1 px-3 md:px-4 py-2.5 md:py-3 bg-primary text-white rounded-[18px] font-bold text-center text-xs md:text-base">Call Now</a>
+                            <a href="tel:+918884544588" className="flex-1 px-3 md:px-4 py-2.5 md:py-3 bg-primary text-white rounded-[18px] font-bold text-center text-xs md:text-base">Call Now</a>
                         </div>
                     </div>
                 </div>

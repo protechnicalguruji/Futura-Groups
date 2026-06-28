@@ -2,12 +2,12 @@ import { motion } from "motion/react";
 import { ShieldCheck, MapPin, BarChart3, Users, TrendingUp, Headphones } from "lucide-react";
 
 const reasons = [
-  { icon: ShieldCheck, title: "Verified Projects", desc: "All our projects are RERA-certified and thoroughly vetted." },
-  { icon: MapPin, title: "Premium Locations", desc: "Strategically located in the most sought-after neighborhoods." },
-  { icon: BarChart3, title: "Transparent Pricing", desc: "No hidden costs, just absolute clarity in every transaction." },
-  { icon: Users, title: "Expert Guidance", desc: "Personalized advice from industry veterans." },
-  { icon: TrendingUp, title: "High ROI Potential", desc: "Curated properties with exceptional appreciation rates." },
-  { icon: Headphones, title: "End-to-End Support", desc: "Seamless experience from site visit to final possession." },
+  { icon: ShieldCheck, title: "Trust-Based Approach", desc: "Built on a foundation of trust and transparency in every transaction." },
+  { icon: MapPin, title: "Premium Branding", desc: "Exclusive real estate solutions with a focus on premium quality." },
+  { icon: BarChart3, title: "Long-Term Guidance", desc: "Expert advice to help you make informed investment decisions." },
+  { icon: Users, title: "B2B & B2C Expertise", desc: "Serving both individual buyers and corporate developers with precision." },
+  { icon: TrendingUp, title: "Diversified Services", desc: "From land parcels to property management, we cover all your needs." },
+  { icon: Headphones, title: "Dedicated Support", desc: "A team of experts committed to your long-term success." },
 ];
 
 export default function WhyChooseUs() {
@@ -16,8 +16,8 @@ export default function WhyChooseUs() {
       <div className="max-w-7xl mx-auto px-8">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16 grid md:grid-cols-2 gap-12 items-center">
             <div>
-                <h2 className="text-5xl font-display font-bold text-primary mb-6">Why Discerning Clients Choose Us</h2>
-                <p className="text-xl text-gray-600 max-w-2xl">We bridge the gap between luxury aspirations and reality, delivering homes that redefine standards of living.</p>
+                <h2 className="text-5xl font-display font-bold text-primary mb-6">Where Trust Meets Tomorrow</h2>
+                <p className="text-xl text-gray-600 max-w-2xl">We focus on delivering trusted real estate solutions while helping clients make informed long-term property investment decisions in Bengaluru.</p>
             </div>
             <div className="h-80 overflow-hidden rounded-[40px]">
                 <img src="https://images.unsplash.com/photo-1577412647305-991150c7d163?auto=format&fit=crop&w=1000&q=80" alt="Why Choose Us" className="w-full h-full object-cover" />

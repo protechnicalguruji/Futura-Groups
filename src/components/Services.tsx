@@ -2,12 +2,12 @@ import { motion } from "motion/react";
 import { ArrowRight, Building2, Home, BarChart3, Landmark, FileText, Briefcase } from "lucide-react";
 
 const services = [
-  { icon: Building2, title: "Property Buying", desc: "Expert guidance in finding your dream home." },
-  { icon: Home, title: "Property Selling", desc: "Maximize value for your luxury assets." },
-  { icon: BarChart3, title: "Investment", desc: "Strategic portfolio management." },
-  { icon: Landmark, title: "Home Loans", desc: "Hassle-free financing solutions." },
-  { icon: FileText, title: "Legal Check", desc: "Complete documentation assistance." },
-  { icon: Briefcase, title: "Management", desc: "Professional property care." },
+  { icon: Building2, title: "Premium Land", desc: "Expert land aggregation and premium land parcels for development." },
+  { icon: Home, title: "Residential", desc: "Curated residential properties and plots for your dream home." },
+  { icon: BarChart3, title: "Investment Consulting", desc: "Strategic advice for informed long-term property investments." },
+  { icon: Landmark, title: "Joint Ventures", desc: "Facilitating successful real estate joint ventures and partnerships." },
+  { icon: Briefcase, title: "Management", desc: "Professional property and NRI property management services." },
+  { icon: FileText, title: "Commercial Leasing", desc: "End-to-end solutions for commercial leasing and land aggregation." },
 ];
 
 export default function Services() {

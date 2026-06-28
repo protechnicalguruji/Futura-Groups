@@ -7,8 +7,8 @@ export default function WhatsAppLeadForm() {
     name: "",
     phone: "",
     email: "",
-    project: "Skyline Residences",
-    budget: "5 Cr - 10 Cr",
+    project: "Premium Land Parcels",
+    budget: "50L - 1 Cr",
     message: ""
   });
   const [error, setError] = useState("");
@@ -34,7 +34,7 @@ Message: ${formData.message}
 
 Please contact me regarding available properties.`;
 
-    window.open(`https://wa.me/917224935780?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/918884544588?text=${encodeURIComponent(msg)}`, '_blank');
   };
 
   const inputClasses = "w-full p-4 pl-12 rounded-[20px] bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:border-accent transition-all";
@@ -56,12 +56,16 @@ Please contact me regarding available properties.`;
       <div className="relative"><Phone className="absolute left-4 top-3 md:top-4 text-gray-300" size={18} /><input type="text" placeholder="Phone Number" className={`${inputClasses} p-3 md:p-4 text-sm md:text-base`} value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} required /></div>
       <div className="relative"><Mail className="absolute left-4 top-3 md:top-4 text-gray-300" size={18} /><input type="email" placeholder="Email Address" className={`${inputClasses} p-3 md:p-4 text-sm md:text-base`} value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} /></div>
       <div className="relative"><Building className="absolute left-4 top-3 md:top-4 text-gray-300" size={18} /><select className={`${inputClasses} p-3 md:p-4 text-sm md:text-base`} value={formData.project} onChange={e => setFormData({...formData, project: e.target.value})}>
-        <option>Skyline Residences</option>
-        <option>The Emerald Villas</option>
+        <option>Premium Land Parcels</option>
+        <option>Residential Properties</option>
+        <option>Commercial Properties</option>
+        <option>Joint Ventures</option>
       </select></div>
       <div className="relative"><Wallet className="absolute left-4 top-3 md:top-4 text-gray-300" size={18} /><select className={`${inputClasses} p-3 md:p-4 text-sm md:text-base`} value={formData.budget} onChange={e => setFormData({...formData, budget: e.target.value})}>
-        <option>5 Cr - 10 Cr</option>
-        <option>10 Cr - 20 Cr</option>
+        <option>Below 50L</option>
+        <option>50L - 1 Cr</option>
+        <option>1 Cr - 5 Cr</option>
+        <option>Above 5 Cr</option>
       </select></div>
       <div className="relative"><MessageSquare className="absolute left-4 top-3 md:top-4 text-gray-300" size={18} /><textarea placeholder="Message" className={`${inputClasses} p-3 md:p-4 text-sm md:text-base`} rows={2} value={formData.message} onChange={e => setFormData({...formData, message: e.target.value})} /></div>
       

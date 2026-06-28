@@ -35,7 +35,7 @@ export default function ContactPage() {
 
         const message = `Hello,\n\nI would like to get in touch regarding your real estate services.\n\nName: ${formData.fullName}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nSubject: ${formData.subject}\nPreferred Project: ${formData.preferredProject}\nBudget: ${formData.budget}\nMessage: ${formData.message}\n\nPlease contact me at your earliest convenience.\n\nThank you.`;
         
-        window.open(`https://wa.me/917224935780?text=${encodeURIComponent(message)}`, "_blank");
+        window.open(`https://wa.me/918884544588?text=${encodeURIComponent(message)}`, "_blank");
     };
 
     return (
@@ -86,15 +86,15 @@ export default function ContactPage() {
                         <h3 className="text-2xl md:text-3xl font-bold">Get In Touch</h3>
                         <div className="flex items-start gap-3 md:gap-4 p-5 md:p-6 bg-[#F8F6F2] rounded-[24px] shadow-lg">
                             <MapPin className="text-accent mt-1 w-5 h-5 md:w-6 md:h-6" /> 
-                            <div><h4 className="font-bold text-sm md:text-base">Our Office</h4><p className="text-xs md:text-sm text-gray-600">123, Luxury Avenue, Mumbai</p></div>
+                            <div><h4 className="font-bold text-sm md:text-base">Our Office</h4><p className="text-xs md:text-sm text-gray-600">Nagawara Main Road, Bengaluru North, Karnataka</p></div>
                         </div>
                         <div className="flex items-start gap-3 md:gap-4 p-5 md:p-6 bg-[#F8F6F2] rounded-[24px] shadow-lg">
                             <Phone className="text-accent mt-1 w-5 h-5 md:w-6 md:h-6" /> 
-                            <div><h4 className="font-bold text-sm md:text-base">Call Us</h4><a href="tel:+917224935780" className="text-xs md:text-sm text-gray-600 hover:text-primary">+91 7224935780</a></div>
+                            <div><h4 className="font-bold text-sm md:text-base">Call Us</h4><a href="tel:+918884544588" className="text-xs md:text-sm text-gray-600 hover:text-primary">+91 88845 44588</a></div>
                         </div>
                         <div className="flex items-start gap-3 md:gap-4 p-5 md:p-6 bg-[#F8F6F2] rounded-[24px] shadow-lg">
                             <Clock className="text-accent mt-1 w-5 h-5 md:w-6 md:h-6" /> 
-                            <div><h4 className="font-bold text-sm md:text-base">Working Hours</h4><p className="text-xs md:text-sm text-gray-600">Mon - Sat: 9 AM - 8 PM</p></div>
+                            <div><h4 className="font-bold text-sm md:text-base">Operating Since</h4><p className="text-xs md:text-sm text-gray-600">2000 (Serving Trust)</p></div>
                         </div>
                     </div>
                 </div>
@@ -119,8 +119,8 @@ export default function ContactPage() {
                 <div className="max-w-5xl mx-auto bg-primary text-white p-8 md:p-16 rounded-[40px]">
                     <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">Need Expert Guidance?</h2>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="tel:+917224935780" className="px-8 py-4 bg-accent text-primary rounded-[18px] font-bold flex items-center justify-center gap-2 transition-transform hover:scale-105"><Phone size={20} /> Call Now</a>
-                        <a href="https://wa.me/917224935780" target="_blank" className="px-8 py-4 bg-white/10 text-white border border-white/20 rounded-[18px] font-bold flex items-center justify-center gap-2 transition-transform hover:scale-105"><MessageCircle size={20} /> WhatsApp</a>
+                        <a href="tel:+918884544588" className="px-8 py-4 bg-accent text-primary rounded-[18px] font-bold flex items-center justify-center gap-2 transition-transform hover:scale-105"><Phone size={20} /> Call Now</a>
+                        <a href="https://wa.me/918884544588" target="_blank" className="px-8 py-4 bg-white/10 text-white border border-white/20 rounded-[18px] font-bold flex items-center justify-center gap-2 transition-transform hover:scale-105"><MessageCircle size={20} /> WhatsApp</a>
                     </div>
                 </div>
             </section>

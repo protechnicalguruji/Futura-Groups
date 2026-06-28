@@ -11,7 +11,7 @@ export default function Navbar({ onNavigate }: { onNavigate: (page: string, scro
       animate={{ y: 0, opacity: 1 }}
       className="fixed top-3 md:top-5 left-1/2 -translate-x-1/2 w-[92%] h-[60px] md:h-[76px] z-50 flex items-center justify-between px-6 md:px-8 bg-white/60 backdrop-blur-md border border-white/40 rounded-full shadow-lg"
     >
-      <div className="font-display text-xl md:text-2xl font-bold text-primary cursor-pointer" onClick={() => onNavigate('home')}>ELITE</div>
+      <div className="font-display text-xl md:text-2xl font-bold text-primary cursor-pointer" onClick={() => onNavigate('home')}>FUTURA GROUPS</div>
       <div className="hidden md:flex gap-4 lg:gap-8 font-sans font-medium text-primary">
         {["Home", "Projects", "Services", "About", "Contact", "Investment"].map((item) => (
           <button key={item} onClick={() => onNavigate(item.toLowerCase())} className="hover:text-accent transition-colors whitespace-nowrap">
@@ -20,10 +20,10 @@ export default function Navbar({ onNavigate }: { onNavigate: (page: string, scro
         ))}
       </div>
       <div className="hidden md:flex gap-4">
-        <a href="tel:+917224935780" aria-label="Call Us" className="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-[18px] font-sans font-medium hover:bg-secondary transition-all hover:scale-105 shadow-md">
+        <a href="tel:+918884544588" aria-label="Call Us" className="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-[18px] font-sans font-medium hover:bg-secondary transition-all hover:scale-105 shadow-md">
           <Phone size={18} /> Call
         </a>
-        <a href="https://wa.me/917224935780?text=Hello, I am interested in your real estate projects. Please contact me." target="_blank" aria-label="Book a consultation" className="flex items-center gap-2 px-6 py-3 bg-accent text-primary rounded-[18px] font-sans font-medium hover:bg-opacity-90 transition-all hover:scale-105 shadow-md">
+        <a href="https://wa.me/918884544588?text=Hello Futura Groups, I am interested in your real estate services. Please contact me." target="_blank" aria-label="Book a consultation" className="flex items-center gap-2 px-6 py-3 bg-accent text-primary rounded-[18px] font-sans font-medium hover:bg-opacity-90 transition-all hover:scale-105 shadow-md">
           <CalendarDays size={18} /> Book
         </a>
       </div>
@@ -45,10 +45,10 @@ export default function Navbar({ onNavigate }: { onNavigate: (page: string, scro
               </button>
             ))}
             <div className="flex flex-col gap-2 mt-2">
-                <a href="tel:+917224935780" className="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white rounded-[18px] font-bold text-sm">
+                <a href="tel:+918884544588" className="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white rounded-[18px] font-bold text-sm">
                     <Phone size={16} /> Call Us
                 </a>
-                <a href="https://wa.me/917224935780" target="_blank" className="flex items-center justify-center gap-2 px-6 py-3 bg-accent text-primary rounded-[18px] font-bold text-sm">
+                <a href="https://wa.me/918884544588" target="_blank" className="flex items-center justify-center gap-2 px-6 py-3 bg-accent text-primary rounded-[18px] font-bold text-sm">
                     <CalendarDays size={16} /> Book Visit
                 </a>
             </div>

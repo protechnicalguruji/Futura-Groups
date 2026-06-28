@@ -6,7 +6,7 @@ export default function SiteVisitForm() {
       <div className="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
         <div>
             <h2 className="text-2xl md:text-5xl font-display font-bold text-primary mb-4 md:mb-6 leading-tight">Schedule Your Exclusive Site Visit</h2>
-            <p className="text-base md:text-xl text-gray-600 mb-6 md:mb-8">Experience the elegance firsthand. Our dedicated concierge will guide you through our flagship developments.</p>
+            <p className="text-base md:text-xl text-gray-600 mb-6 md:mb-8">Discover the potential of your next investment. Our team will guide you through our premium land parcels and properties in Bengaluru.</p>
         </div>
         <form className="bg-background p-5 md:p-8 rounded-[28px] border border-gray-100 shadow-xl space-y-3 md:space-y-6">
             <input type="text" placeholder="Name" className="w-full p-3 md:p-4 rounded-[18px] border border-gray-200 focus:outline-none focus:border-accent text-sm md:text-base" />

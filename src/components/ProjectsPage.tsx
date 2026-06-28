@@ -47,7 +47,7 @@ export default function ProjectsPage({ onSelect }: { onSelect: (p: any) => void 
                             <div className="text-xl font-bold text-accent mb-6">{p.price}</div>
                             <div className="flex gap-4">
                                 <button onClick={() => onSelect(p)} className="flex-1 px-4 py-3 border border-primary text-primary rounded-[18px] font-bold">Details</button>
-                                <a href="tel:+917224935780" className="flex-1 px-4 py-3 bg-primary text-white rounded-[18px] font-bold text-center">Call Now</a>
+                                <a href="tel:+918884544588" className="flex-1 px-4 py-3 bg-primary text-white rounded-[18px] font-bold text-center">Call Now</a>
                             </div>
                         </div>
                     </div>

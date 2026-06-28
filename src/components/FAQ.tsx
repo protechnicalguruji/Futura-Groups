@@ -3,11 +3,11 @@ import { motion, AnimatePresence } from "motion/react";
 import { ChevronDown } from "lucide-react";
 
 const faqs = [
-    { q: "What is RERA?", a: "RERA stands for Real Estate Regulatory Authority." },
-    { q: "Are the prices negotiable?", a: "We maintain transparent pricing for all our clients." },
-    { q: "Can I take a home loan?", a: "Yes, we work with all leading banks." },
-    { q: "Is the location safe?", a: "All our projects are in secure, premium neighborhoods." },
-    { q: "What is the ROI?", a: "Historically, our projects yield 12-15% annually." },
+    { q: "What is Futura Groups' primary focus?", a: "We focus on delivering trusted real estate solutions and helping clients make informed long-term property investment decisions." },
+    { q: "What areas do you operate in?", a: "We primarily operate in Bengaluru, with a strong presence in North Bengaluru and Nagawara." },
+    { q: "Do you offer NRI services?", a: "Yes, we specialize in NRI Property Management and Investment Consulting." },
+    { q: "What types of properties do you handle?", a: "Our portfolio includes Premium Land Parcels, Residential and Commercial properties, and Industrial land." },
+    { q: "Since when has Futura Groups been active?", a: "We have been operating in the real estate sector since 2000." },
 ];
 
 export default function FAQ() {

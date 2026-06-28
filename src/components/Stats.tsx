@@ -18,10 +18,10 @@ function Counter({ value }: { value: number }) {
 }
 
 const stats = [
-  { label: "Projects Delivered", value: 25, suffix: "+" },
-  { label: "Happy Families", value: 5000, suffix: "+" },
-  { label: "Sq Ft Delivered", value: 10, suffix: "M+" },
-  { label: "Years Experience", value: 15, suffix: "+" },
+  { label: "Years of Trust", value: 24, suffix: "+" },
+  { label: "Core Services", value: 10, suffix: "" },
+  { label: "B2B & B2C Clients", value: 500, suffix: "+" },
+  { label: "Dedicated Experts", value: 10, suffix: "" },
 ];
 
 export default function Stats() {

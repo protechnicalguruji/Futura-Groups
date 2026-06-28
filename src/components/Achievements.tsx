@@ -19,10 +19,10 @@ function Counter({ value }: { value: number }) {
 }
 
 const stats = [
-  { label: "Sales", value: 5000, suffix: " Cr+" },
-  { label: "Clients", value: 5000, suffix: "+" },
-  { label: "Projects", value: 250, suffix: "+" },
-  { label: "Years", value: 15, suffix: "+" },
+  { label: "Years in Business", value: 24, suffix: "+" },
+  { label: "Core Services", value: 10, suffix: "" },
+  { label: "Property Managed", value: 100, suffix: "+" },
+  { label: "Team Experts", value: 10, suffix: "" },
 ];
 
 export default function Achievements() {

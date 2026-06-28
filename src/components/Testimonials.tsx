@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { Star } from "lucide-react";
 
 const reviews = [
-    { name: "John Doe", review: "Exceptional experience, truly professional team.", location: "Mumbai" },
-    { name: "Jane Smith", review: "Found my dream villa within my budget.", location: "Pune" },
+    { name: "Siddharth K.", review: "Futura Groups provided exceptional guidance for my land investment in North Bengaluru. Their trust-based approach is refreshing.", location: "Bengaluru" },
+    { name: "Anjali M.", review: "As an NRI, property management was a major concern. Futura Groups has been managing my portfolio with absolute professionalism.", location: "London" },
 ];
 
 export default function Testimonials() {

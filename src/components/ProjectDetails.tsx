@@ -63,8 +63,8 @@ Please contact me regarding this project.`;
                     <div className="h-20 w-20 md:h-24 md:w-24 bg-gray-200 rounded-full mb-4" />
                     <div className="font-bold text-lg md:text-xl">John Agent</div>
                     <div className="text-xs md:text-sm text-gray-500 mb-4 md:mb-6">Property Consultant</div>
-                    <a href="tel:+917224935780" className="block w-full p-3 mb-2 bg-primary text-white rounded-[18px] font-bold text-center text-sm md:text-base">Call Now</a>
-                    <a href="https://wa.me/917224935780?text=Hello, I am interested in this property. Please contact me." className="block w-full p-3 bg-accent text-primary rounded-[18px] font-bold text-center text-sm md:text-base">WhatsApp</a>
+                    <a href="tel:+918884544588" className="block w-full p-3 mb-2 bg-primary text-white rounded-[18px] font-bold text-center text-sm md:text-base">Call Now</a>
+                    <a href="https://wa.me/918884544588?text=Hello Futura Groups, I am interested in this property. Please contact me." className="block w-full p-3 bg-accent text-primary rounded-[18px] font-bold text-center text-sm md:text-base">WhatsApp</a>
                 </div>
                 <div className="md:col-span-2 bg-white p-6 md:p-8 rounded-[28px] border border-gray-100 shadow-sm">
                     <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Property Information</h3>
@@ -95,7 +95,7 @@ Please contact me regarding this project.`;
                             <div className="text-lg md:text-xl font-bold text-accent mb-4 md:mb-6">{p.price}</div>
                             <div className="flex gap-3 md:gap-4">
                               <button onClick={() => onSelect(p)} className="flex-1 px-3 md:px-4 py-2.5 md:py-3 border border-primary text-primary rounded-[18px] font-bold hover:bg-primary hover:text-white transition-all text-center text-xs md:text-base">Details</button>
-                              <a href="tel:+917224935780" className="flex-1 px-3 md:px-4 py-2.5 md:py-3 bg-primary text-white rounded-[18px] font-bold text-center hover:bg-secondary text-xs md:text-base">Call Now</a>
+                              <a href="tel:+918884544588" className="flex-1 px-3 md:px-4 py-2.5 md:py-3 bg-primary text-white rounded-[18px] font-bold text-center hover:bg-secondary text-xs md:text-base">Call Now</a>
                             </div>
                           </div>
                         </div>
