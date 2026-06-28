@@ -38,7 +38,18 @@ export default function Projects({ onSelect, onNavigate, compareList, onToggleCo
                   </div>
                   <div className="p-5 md:p-6 lg:p-4">
                     <h3 className="text-xl md:text-xl lg:text-lg font-bold text-primary leading-tight">{p.name}</h3>
-                    <p className="text-sm md:text-base lg:text-sm text-gray-500 mb-4">{p.location}</p>
+                    <p className="text-sm md:text-base lg:text-sm text-gray-500 mb-2">{p.location}</p>
+                    <div className="flex items-center gap-3 text-xs text-gray-400 mb-4">
+                        <span>{p.area}</span>
+                        <span>•</span>
+                        <span>{p.status}</span>
+                        {p.bedrooms > 0 && (
+                            <>
+                                <span>•</span>
+                                <span>{p.bedrooms} Bedrooms</span>
+                            </>
+                        )}
+                    </div>
                     <div className="text-lg md:text-xl lg:text-lg font-bold text-accent mb-4 md:mb-5 lg:mb-4">{p.price}</div>
                     <div className="flex gap-3 md:gap-4 lg:gap-3">
                       <button onClick={() => onSelect(p)} className="flex-1 px-3 md:px-4 lg:px-3 py-2.5 md:py-3 lg:py-2 border border-primary text-primary rounded-[18px] font-bold hover:bg-primary hover:text-white transition-all text-xs md:text-base lg:text-sm">Details</button>

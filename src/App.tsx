@@ -27,6 +27,8 @@ import FAQ from "./components/FAQ";
 import FinalCTA from "./components/FinalCTA";
 import FloatingElements from "./components/FloatingElements";
 import Newsletter from "./components/Newsletter";
+import Gallery from "./components/Gallery";
+import Blog from "./components/Blog";
 import Footer from "./components/Footer";
 import LoadingScreen from "./components/LoadingScreen";
 import ProjectDetails from "./components/ProjectDetails";
@@ -98,6 +100,8 @@ export default function App() {
               <Services />
               <Process />
               <Testimonials />
+              <Gallery />
+              <Blog />
               <Partners />
               <Achievements />
               <CTA onNavigate={handleNavigate} />
@@ -128,6 +132,13 @@ export default function App() {
               onToggleCompare={toggleCompare}
             />
           ) : null
+        )}
+
+        {currentPage !== 'home' && (
+          <>
+            <Newsletter />
+            <Footer />
+          </>
         )}
 
         {/* Floating Compare Bar */}

@@ -2,12 +2,12 @@ import { motion } from "motion/react";
 import { ShieldCheck, MapPin, BarChart3, Users, TrendingUp, Headphones } from "lucide-react";
 
 const reasons = [
-  { icon: ShieldCheck, title: "Trust-Based Approach", desc: "Built on a foundation of trust and transparency in every transaction." },
-  { icon: MapPin, title: "Premium Branding", desc: "Exclusive real estate solutions with a focus on premium quality." },
-  { icon: BarChart3, title: "Long-Term Guidance", desc: "Expert advice to help you make informed investment decisions." },
-  { icon: Users, title: "B2B & B2C Expertise", desc: "Serving both individual buyers and corporate developers with precision." },
-  { icon: TrendingUp, title: "Diversified Services", desc: "From land parcels to property management, we cover all your needs." },
-  { icon: Headphones, title: "Dedicated Support", desc: "A team of experts committed to your long-term success." },
+  { icon: ShieldCheck, title: "Trusted Service", desc: "Two decades of unwavering commitment to transparency and client success." },
+  { icon: ShieldCheck, title: "Verified Properties", desc: "Every property in our portfolio undergoes rigorous legal and physical verification." },
+  { icon: MapPin, title: "Legal Support", desc: "Complete assistance with documentation, registration, and legal clearances." },
+  { icon: BarChart3, title: "Best Price Guarantee", desc: "Ensuring you get the most competitive market rates for premium properties." },
+  { icon: TrendingUp, title: "Investment Guidance", desc: "Data-driven insights to maximize your long-term ROI and property value." },
+  { icon: Headphones, title: "Dedicated Support", desc: "Personalized assistance from experts who understand your unique needs." },
 ];
 
 export default function WhyChooseUs() {

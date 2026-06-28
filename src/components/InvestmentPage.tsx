@@ -9,7 +9,7 @@ export default function InvestmentPage({ onSelect, compareList, onToggleCompare 
   const [priceRange, setPriceRange] = useState(60);
 
   const filtered = projects.filter(p => 
-    (config === "All" || p.configuration === config) &&
+    (config === "All" || p.category === config) &&
     p.priceVal <= priceRange
   );
 
@@ -19,7 +19,7 @@ export default function InvestmentPage({ onSelect, compareList, onToggleCompare 
         <h1 className="text-4xl md:text-4xl lg:text-3xl font-display font-bold text-primary mb-8 md:mb-10 lg:mb-8">Investment Opportunities</h1>
         <div className="bg-white/80 backdrop-blur-lg p-6 lg:p-5 rounded-[28px] border border-gray-100 shadow-sm mb-8 md:mb-10 lg:mb-8">
           <div className="flex gap-4 mb-5 lg:mb-4 overflow-x-auto pb-4 no-scrollbar">
-            {["All", "2 BHK", "3 BHK", "4 BHK", "5 BHK"].map(c => (
+            {["All", "Luxury Apartments", "Villas", "Commercial", "Plots"].map(c => (
               <button key={c} onClick={() => setConfig(c)} className={`px-5 py-2.5 lg:px-4 lg:py-2 rounded-full font-bold whitespace-nowrap transition-all ${config === c ? 'bg-primary text-white shadow-lg' : 'bg-background hover:bg-gray-100'}`}>{c}</button>
             ))}
           </div>
