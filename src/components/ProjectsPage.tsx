@@ -2,7 +2,9 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { projects } from "../data";
 
-export default function ProjectsPage({ onSelect }: { onSelect: (p: any) => void }) {
+import { Check, Plus } from "lucide-react";
+
+export default function ProjectsPage({ onSelect, compareList, onToggleCompare }: { onSelect: (p: any) => void; compareList: any[]; onToggleCompare: (p: any) => void }) {
     const [config, setConfig] = useState("All");
     const [search, setSearch] = useState("");
     const [sort, setSort] = useState("Newest");
@@ -35,23 +37,33 @@ export default function ProjectsPage({ onSelect }: { onSelect: (p: any) => void 
                 </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-6">
-                {filtered.map(p => (
-                    <div key={p.id} className="bg-[#F8F6F2] rounded-[28px] shadow-lg overflow-hidden border border-white">
-                        <div className="h-64 lg:h-56 overflow-hidden">
-                            <img src={p.image} alt={p.name} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy" />
-                        </div>
-                        <div className="p-6 lg:p-5">
-                            <h3 className="text-2xl lg:text-xl font-bold text-primary mb-2 lg:mb-1">{p.name}</h3>
-                            <p className="text-gray-500 mb-2 lg:mb-1 lg:text-sm">{p.location}</p>
-                            <p className="text-sm text-gray-400 mb-4 lg:mb-3 lg:text-xs">{p.configuration} | {p.area} | {p.status}</p>
-                            <div className="text-xl lg:text-lg font-bold text-accent mb-6 lg:mb-4">{p.price}</div>
-                            <div className="flex gap-4 lg:gap-3">
-                                <button onClick={() => onSelect(p)} className="flex-1 px-4 py-3 lg:py-2 border border-primary text-primary rounded-[18px] font-bold lg:text-sm">Details</button>
-                                <a href="tel:+918884544588" className="flex-1 px-4 py-3 lg:py-2 bg-primary text-white rounded-[18px] font-bold text-center lg:text-sm">Call Now</a>
+                {filtered.map(p => {
+                    const isCompared = compareList.some(item => item.id === p.id);
+                    return (
+                        <div key={p.id} className="group bg-[#F8F6F2] rounded-[28px] shadow-lg overflow-hidden border border-white">
+                            <div className="h-64 lg:h-56 overflow-hidden relative">
+                                <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+                                <button 
+                                    onClick={(e) => { e.stopPropagation(); onToggleCompare(p); }}
+                                    className={`absolute top-4 right-4 p-2 rounded-full backdrop-blur-md border transition-all z-20 ${isCompared ? 'bg-accent text-primary border-accent' : 'bg-black/20 text-white border-white/40 opacity-0 group-hover:opacity-100'}`}
+                                    title={isCompared ? "Remove from comparison" : "Add to comparison"}
+                                >
+                                    {isCompared ? <Check size={18} /> : <Plus size={18} />}
+                                </button>
+                            </div>
+                            <div className="p-6 lg:p-5">
+                                <h3 className="text-2xl lg:text-xl font-bold text-primary mb-2 lg:mb-1">{p.name}</h3>
+                                <p className="text-gray-500 mb-2 lg:mb-1 lg:text-sm">{p.location}</p>
+                                <p className="text-sm text-gray-400 mb-4 lg:mb-3 lg:text-xs">{p.configuration} | {p.area} | {p.status}</p>
+                                <div className="text-xl lg:text-lg font-bold text-accent mb-6 lg:mb-4">{p.price}</div>
+                                <div className="flex gap-4 lg:gap-3">
+                                    <button onClick={() => onSelect(p)} className="flex-1 px-4 py-3 lg:py-2 border border-primary text-primary rounded-[18px] font-bold lg:text-sm">Details</button>
+                                    <a href="tel:+918884544588" className="flex-1 px-4 py-3 lg:py-2 bg-primary text-white rounded-[18px] font-bold text-center lg:text-sm">Call Now</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    );
+                })}
             </div>
         </div>
     </motion.div>;

@@ -37,10 +37,16 @@ Please contact me regarding this project.`;
         <p className="text-lg md:text-xl text-gray-500 mb-8">{project.location} | {project.price}</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="md:col-span-2">
-                <div className="h-64 md:h-96 bg-gray-200 rounded-[24px] md:rounded-[28px] mb-4 md:mb-8" />
+                <div className="h-64 md:h-96 overflow-hidden rounded-[24px] md:rounded-[28px] mb-4 md:mb-8">
+                    <img src={project.image} alt={project.name} className="w-full h-full object-cover" />
+                </div>
                 <div className="grid grid-cols-2 gap-3 md:gap-4">
-                    <div className="h-32 md:h-48 bg-gray-200 rounded-[24px] md:rounded-[28px]" />
-                    <div className="h-32 md:h-48 bg-gray-200 rounded-[24px] md:rounded-[28px]" />
+                    <div className="h-32 md:h-48 overflow-hidden rounded-[24px] md:rounded-[28px]">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Detail 1" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="h-32 md:h-48 overflow-hidden rounded-[24px] md:rounded-[28px]">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" alt="Detail 2" className="w-full h-full object-cover" />
+                    </div>
                 </div>
             </div>
             <form onSubmit={handleSubmit} className="bg-white p-5 md:p-8 rounded-[28px] border border-gray-100 shadow-xl space-y-3 md:space-y-4">
@@ -60,8 +66,10 @@ Please contact me regarding this project.`;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 <div className="bg-white p-6 md:p-8 rounded-[28px] border border-gray-100 shadow-sm">
                     <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Contact Agent</h3>
-                    <div className="h-20 w-20 md:h-24 md:w-24 bg-gray-200 rounded-full mb-4" />
-                    <div className="font-bold text-lg md:text-xl">John Agent</div>
+                    <div className="h-20 w-20 md:h-24 md:w-24 overflow-hidden rounded-full mb-4">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80" alt="Agent" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="font-bold text-lg md:text-xl">Siddharth Sharma</div>
                     <div className="text-xs md:text-sm text-gray-500 mb-4 md:mb-6">Property Consultant</div>
                     <a href="tel:+918884544588" className="block w-full p-3 mb-2 bg-primary text-white rounded-[18px] font-bold text-center text-sm md:text-base">Call Now</a>
                     <a href="https://wa.me/918884544588?text=Hello Futura Groups, I am interested in this property. Please contact me." className="block w-full p-3 bg-accent text-primary rounded-[18px] font-bold text-center text-sm md:text-base">WhatsApp</a>
@@ -88,7 +96,9 @@ Please contact me regarding this project.`;
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                     {suggested.map(p => (
                         <div key={p.id} className="bg-white rounded-[28px] shadow-sm overflow-hidden border border-gray-100">
-                          <div className="h-48 md:h-64 bg-gray-200" />
+                          <div className="h-48 md:h-64 overflow-hidden">
+                            <img src={p.image} alt={p.name} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy" />
+                          </div>
                           <div className="p-5 md:p-6">
                             <h3 className="text-xl md:text-2xl font-bold text-primary leading-tight">{p.name}</h3>
                             <p className="text-sm md:text-base text-gray-500 mb-4">{p.location}</p>
