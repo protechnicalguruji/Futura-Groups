@@ -17,16 +17,16 @@ export default function ProjectsPage({ onSelect }: { onSelect: (p: any) => void 
 
     return <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="pt-32 px-8 pb-20 bg-background min-h-screen">
         <div className="max-w-7xl mx-auto">
-            <h1 className="text-6xl font-bold mb-10 text-primary">Projects</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-10 text-primary">Projects</h1>
             <div className="bg-white/80 backdrop-blur-lg p-6 rounded-[28px] border border-gray-100 shadow-sm mb-10 space-y-6">
-                <div className="flex gap-4 overflow-x-auto pb-2">
+                <div className="flex gap-4 overflow-x-auto pb-4 no-scrollbar">
                     {["All", "2 BHK", "3 BHK", "4 BHK", "5 BHK"].map(c => (
-                        <button key={c} onClick={() => setConfig(c)} className={`px-6 py-3 rounded-full font-bold whitespace-nowrap ${config === c ? 'bg-primary text-white' : 'bg-background'}`}>{c}</button>
+                        <button key={c} onClick={() => setConfig(c)} className={`px-6 py-3 rounded-full font-bold whitespace-nowrap transition-all ${config === c ? 'bg-primary text-white shadow-lg' : 'bg-background hover:bg-gray-100'}`}>{c}</button>
                     ))}
                 </div>
-                <div className="flex gap-4">
-                    <input type="text" placeholder="Search by name or location..." className="flex-1 p-4 rounded-[18px] border" onChange={e => setSearch(e.target.value)} />
-                    <select className="p-4 rounded-[18px] border" onChange={e => setSort(e.target.value)}>
+                <div className="flex flex-col md:flex-row gap-4">
+                    <input type="text" placeholder="Search by name or location..." className="flex-1 p-4 rounded-[18px] border border-gray-200 focus:outline-none focus:border-accent" onChange={e => setSearch(e.target.value)} />
+                    <select className="p-4 rounded-[18px] border border-gray-200 focus:outline-none focus:border-accent bg-white" onChange={e => setSort(e.target.value)}>
                         <option>Newest</option>
                         <option>Price: Low to High</option>
                         <option>Price: High to Low</option>

@@ -13,9 +13,9 @@ export default function Projects({ onSelect, onNavigate }: { onSelect: (p: any) 
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
           <h2 className="text-5xl font-display font-bold text-primary">Featured Projects</h2>
-          <div className="flex gap-2 p-1 bg-gray-100 rounded-full overflow-x-auto max-w-full">
+          <div className="flex gap-2 p-1 bg-gray-100 rounded-full overflow-x-auto max-w-full no-scrollbar pb-1 md:pb-0">
             {categories.map(c => (
-              <button key={c} onClick={() => setActive(c)} className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${active === c ? "bg-white shadow-md text-primary" : "text-gray-500"}`}>{c}</button>
+              <button key={c} onClick={() => setActive(c)} className={`px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-medium transition-all whitespace-nowrap ${active === c ? "bg-white shadow-md text-primary" : "text-gray-500 hover:text-primary"}`}>{c}</button>
             ))}
           </div>
         </div>

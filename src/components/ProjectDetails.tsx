@@ -30,11 +30,11 @@ Please contact me regarding this project.`;
   };
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="pt-24 bg-background min-h-screen">
-      <button onClick={onBack} className="fixed top-28 left-8 z-50 flex items-center gap-2 bg-white p-3 rounded-full shadow-md"><ArrowLeft size={20} /> Back</button>
-      <div className="max-w-7xl mx-auto px-8 py-16">
-        <h1 className="text-6xl font-display font-bold text-primary mb-4">{project.name}</h1>
-        <p className="text-xl text-gray-500 mb-8">{project.location} | {project.price}</p>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="pt-24 bg-background min-h-screen relative">
+      <button onClick={onBack} className="fixed bottom-8 right-8 md:top-28 md:left-8 md:bottom-auto md:right-auto z-50 flex items-center gap-2 bg-white p-4 md:p-3 rounded-full shadow-2xl md:shadow-md transition-transform hover:scale-110 active:scale-95"><ArrowLeft size={20} /> <span className="hidden md:inline">Back</span></button>
+      <div className="max-w-7xl mx-auto px-6 md:px-8 py-12 md:py-16">
+        <h1 className="text-4xl md:text-6xl font-display font-bold text-primary mb-4 leading-tight">{project.name}</h1>
+        <p className="text-lg md:text-xl text-gray-500 mb-8">{project.location} | {project.price}</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="md:col-span-2">
                 <div className="h-96 bg-gray-200 rounded-[28px] mb-8" />
@@ -43,7 +43,7 @@ Please contact me regarding this project.`;
                     <div className="h-48 bg-gray-200 rounded-[28px]" />
                 </div>
             </div>
-            <form onSubmit={handleSubmit} className="bg-white p-8 rounded-[28px] border border-gray-100 shadow-sm space-y-4">
+            <form onSubmit={handleSubmit} className="bg-white p-6 md:p-8 rounded-[28px] border border-gray-100 shadow-xl space-y-4">
                 <h3 className="text-2xl font-bold mb-6">Schedule a Call</h3>
                 <input type="text" placeholder="Full Name" className="w-full p-4 rounded-[18px] border border-gray-200" onChange={e => setFormData({...formData, name: e.target.value})} required />
                 <input type="text" placeholder="Phone Number" className="w-full p-4 rounded-[18px] border border-gray-200" onChange={e => setFormData({...formData, phone: e.target.value})} required />
@@ -102,12 +102,12 @@ Please contact me regarding this project.`;
                     ))}
                 </div>
             </div>
-            <div className="bg-primary text-white p-16 rounded-[40px] text-center">
-                <h3 className="text-4xl font-bold mb-6">Need Expert Guidance?</h3>
+            <div className="bg-primary text-white p-8 md:p-16 rounded-[40px] text-center">
+                <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">Need Expert Guidance?</h3>
                 <p className="mb-10 text-gray-300">Talk to our experts for personalized advice.</p>
-                <div className="flex gap-4 justify-center">
-                    <button className="px-8 py-4 bg-accent text-primary rounded-[18px] font-bold">Schedule Call</button>
-                    <button className="px-8 py-4 bg-white/10 text-white rounded-[18px] font-bold">Call Now</button>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button className="px-8 py-4 bg-accent text-primary rounded-[18px] font-bold hover:scale-105 transition-transform">Schedule Call</button>
+                    <button className="px-8 py-4 bg-white/10 text-white rounded-[18px] font-bold hover:bg-white/20 transition-all">Call Now</button>
                 </div>
             </div>
         </div>

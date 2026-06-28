@@ -64,7 +64,7 @@ export default function App() {
   return (
     <>
       {loading && <LoadingScreen onComplete={() => setLoading(false)} />}
-      <main className="bg-background min-h-screen">
+      <main className="bg-background min-h-screen overflow-x-hidden w-full relative">
         <Navbar onNavigate={handleNavigate} />
         {selectedProject ? (
           <ProjectDetails project={selectedProject} onBack={() => setSelectedProject(null)} onSelect={setSelectedProject} />

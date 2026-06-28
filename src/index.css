@@ -14,3 +14,9 @@
   --radius-cards: 28px;
   --radius-buttons: 18px;
 }
+
+@layer base {
+  html, body {
+    @apply overflow-x-hidden w-full max-w-full;
+  }
+}

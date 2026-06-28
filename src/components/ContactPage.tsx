@@ -41,19 +41,19 @@ export default function ContactPage() {
     return (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="pt-32 pb-20 bg-background">
             {/* Hero */}
-            <section className="relative px-8 pb-16 h-[400px] flex items-center justify-center overflow-hidden">
+            <section className="relative px-8 pb-16 min-h-[300px] md:h-[400px] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center" />
                 <div className="absolute inset-0 bg-black/40" />
-                <div className="relative text-center text-white">
-                    <h1 className="text-7xl font-display font-bold mb-6">Contact Us</h1>
-                    <p className="text-xl max-w-2xl mx-auto">Get in touch for expert real estate guidance and personalized property solutions.</p>
+                <div className="relative text-center text-white px-4">
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold mb-6">Contact Us</h1>
+                    <p className="text-lg md:text-xl max-w-2xl mx-auto">Get in touch for expert real estate guidance and personalized property solutions.</p>
                 </div>
             </section>
 
             {/* Contact Info & Form */}
             <section className="px-8 py-16 bg-white">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
-                    <form id="contact-form" onSubmit={handleSubmit} className="space-y-6 bg-[#F8F6F2] p-10 rounded-[32px] border border-white shadow-lg">
+                    <form id="contact-form" onSubmit={handleSubmit} className="space-y-6 bg-[#F8F6F2] p-6 md:p-10 rounded-[32px] border border-white shadow-lg">
                         <h3 className="text-3xl font-bold">Send us a Message</h3>
                         <div className="space-y-1">
                             <input type="text" placeholder="Full Name" value={formData.fullName} onChange={e => setFormData({...formData, fullName: e.target.value})} className={`w-full p-4 border ${errors.fullName ? 'border-red-500' : 'border-gray-200'} rounded-2xl`} />
@@ -115,12 +115,12 @@ export default function ContactPage() {
             </section>
 
             {/* Final CTA */}
-            <section className="px-8 py-24 text-center">
-                <div className="max-w-5xl mx-auto bg-primary text-white p-16 rounded-[40px]">
-                    <h2 className="text-5xl font-bold mb-8">Need Expert Guidance?</h2>
-                    <div className="flex gap-4 justify-center">
-                        <a href="tel:+917224935780" className="px-8 py-4 bg-accent text-primary rounded-[18px] font-bold flex items-center gap-2"><Phone size={20} /> Call Now</a>
-                        <a href="https://wa.me/917224935780?text=Hello, I am interested in your real estate projects. Please contact me." target="_blank" className="px-8 py-4 bg-white/10 text-white rounded-[18px] font-bold flex items-center gap-2"><MessageCircle size={20} /> WhatsApp</a>
+            <section className="px-6 md:px-8 py-16 md:py-24 text-center">
+                <div className="max-w-5xl mx-auto bg-primary text-white p-8 md:p-16 rounded-[40px]">
+                    <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">Need Expert Guidance?</h2>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="tel:+917224935780" className="px-8 py-4 bg-accent text-primary rounded-[18px] font-bold flex items-center justify-center gap-2 transition-transform hover:scale-105"><Phone size={20} /> Call Now</a>
+                        <a href="https://wa.me/917224935780" target="_blank" className="px-8 py-4 bg-white/10 text-white border border-white/20 rounded-[18px] font-bold flex items-center justify-center gap-2 transition-transform hover:scale-105"><MessageCircle size={20} /> WhatsApp</a>
                     </div>
                 </div>
             </section>

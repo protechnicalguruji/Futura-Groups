@@ -12,17 +12,19 @@ export default function InvestmentPage({ onSelect }: { onSelect: (p: any) => voi
   );
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="pt-24 px-8 pb-20">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="pt-32 px-6 md:px-8 pb-20">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-5xl font-display font-bold text-primary mb-10">Investment Opportunities</h1>
+        <h1 className="text-4xl md:text-5xl font-display font-bold text-primary mb-10">Investment Opportunities</h1>
         <div className="bg-white/80 backdrop-blur-lg p-6 rounded-[28px] border border-gray-100 shadow-sm mb-10">
-          <div className="flex gap-4 mb-6">
+          <div className="flex gap-4 mb-6 overflow-x-auto pb-4 no-scrollbar">
             {["All", "2 BHK", "3 BHK", "4 BHK", "5 BHK"].map(c => (
-              <button key={c} onClick={() => setConfig(c)} className={`px-6 py-3 rounded-full font-bold ${config === c ? 'bg-primary text-white' : 'bg-background'}`}>{c}</button>
+              <button key={c} onClick={() => setConfig(c)} className={`px-6 py-3 rounded-full font-bold whitespace-nowrap transition-all ${config === c ? 'bg-primary text-white shadow-lg' : 'bg-background hover:bg-gray-100'}`}>{c}</button>
             ))}
           </div>
-          <input type="range" min="3" max="60" value={priceRange} onChange={e => setPriceRange(Number(e.target.value))} className="w-full" />
-          <p>Max Price: {priceRange} Cr</p>
+          <div className="space-y-4">
+            <input type="range" min="3" max="60" value={priceRange} onChange={e => setPriceRange(Number(e.target.value))} className="w-full accent-accent" />
+            <p className="font-bold text-primary">Max Price: {priceRange} Cr</p>
+          </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {filtered.map(p => (
