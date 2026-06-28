@@ -13,12 +13,12 @@ const faqs = [
 export default function FAQ() {
     const [open, setOpen] = useState<number | null>(null);
     return (
-        <section className="py-12 md:py-24 lg:py-16 bg-background">
+        <section className="py-12 md:py-20 lg:py-12 bg-background">
             <div className="max-w-3xl mx-auto px-6 md:px-8">
-                <h2 className="text-3xl md:text-5xl lg:text-4xl font-display font-bold text-primary mb-10 md:mb-16 lg:mb-12 text-center">Frequently Asked Questions</h2>
+                <h2 className="text-3xl md:text-4xl lg:text-3xl font-display font-bold text-primary mb-10 md:mb-12 lg:mb-10 text-center">Frequently Asked Questions</h2>
                 {faqs.map((f, i) => (
-                    <motion.div key={i} whileHover={{ y: -5 }} className="mb-3 md:mb-4 bg-surface p-5 md:p-6 lg:p-4 rounded-[24px] border border-white shadow-lg cursor-pointer hover:shadow-xl transition-all" onClick={() => setOpen(open === i ? null : i)}>
-                        <div className="flex justify-between items-center font-bold text-primary text-sm md:text-base">
+                    <motion.div key={i} whileHover={{ y: -5 }} className="mb-3 md:mb-4 bg-surface p-5 md:p-5 lg:p-3.5 rounded-[24px] border border-white shadow-lg cursor-pointer hover:shadow-xl transition-all" onClick={() => setOpen(open === i ? null : i)}>
+                        <div className="flex justify-between items-center font-bold text-primary text-sm md:text-base lg:text-sm">
                             {f.q}
                             <ChevronDown className={`transition-transform w-4 h-4 md:w-5 md:h-5 ${open === i ? "rotate-180" : ""}`} />
                         </div>

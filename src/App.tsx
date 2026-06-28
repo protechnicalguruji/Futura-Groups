@@ -38,13 +38,10 @@ import InvestmentPage from "./components/InvestmentPage";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [currentPage, setCurrentPage] = useState('home');
   const [compareList, setCompareList] = useState<any[]>([]);
   const [showCompare, setShowCompare] = useState(false);
-
-  const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
 
   const toggleCompare = (project: any) => {
     setCompareList(prev => {
@@ -81,8 +78,8 @@ export default function App() {
   return (
     <>
       {loading && <LoadingScreen onComplete={() => setLoading(false)} />}
-      <main className={`${isDarkMode ? 'dark' : ''} bg-background min-h-screen overflow-x-hidden w-full relative transition-colors duration-500`}>
-        <Navbar onNavigate={handleNavigate} isDarkMode={isDarkMode} onToggleDarkMode={toggleDarkMode} />
+      <main className="bg-background min-h-screen overflow-x-hidden w-full relative">
+        <Navbar onNavigate={handleNavigate} />
         {selectedProject ? (
           <ProjectDetails project={selectedProject} onBack={() => setSelectedProject(null)} onSelect={setSelectedProject} />
         ) : (

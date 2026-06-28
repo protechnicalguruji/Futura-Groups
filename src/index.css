@@ -25,16 +25,7 @@
     --color-surface: #F8F6F2;
   }
 
-  .dark {
-    --color-primary: #D4AF37;
-    --color-secondary: #0B1F33;
-    --color-accent: #D4AF37;
-    --color-background: #0B1F33;
-    --color-text: #F8FAFC;
-    --color-surface: #112B44;
-  }
-
   html, body {
-    @apply overflow-x-hidden w-full max-w-full bg-background text-text transition-colors duration-500;
+    @apply overflow-x-hidden w-full max-w-full bg-background text-text;
   }
 }

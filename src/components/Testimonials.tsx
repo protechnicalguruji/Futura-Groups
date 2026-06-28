@@ -8,16 +8,16 @@ const reviews = [
 
 export default function Testimonials() {
   return (
-    <section className="py-12 md:py-24 lg:py-16 bg-white">
+    <section className="py-12 md:py-20 lg:py-12 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <h2 className="text-3xl md:text-5xl lg:text-4xl font-display font-bold text-primary mb-10 md:mb-16 lg:mb-12 text-center">Testimonials</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-3xl font-display font-bold text-primary mb-10 md:mb-12 lg:mb-10 text-center">Testimonials</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-6">
             {reviews.map((r, i) => (
-                <motion.div key={i} whileHover={{ y: -10 }} className="bg-surface p-6 md:p-8 lg:p-6 rounded-[28px] shadow-lg border border-white hover:shadow-2xl transition-all">
+                <motion.div key={i} whileHover={{ y: -10 }} className="bg-surface p-6 md:p-7 lg:p-5 rounded-[28px] shadow-lg border border-white hover:shadow-2xl transition-all">
                     <div className="flex text-accent mb-3 md:mb-4 lg:mb-3">
                         {[...Array(5)].map((_, j) => <Star key={j} fill="currentColor" size={16} />)}
                     </div>
-                    <p className="text-sm md:text-lg lg:text-base text-gray-700 mb-4 md:mb-6 lg:mb-4 leading-relaxed italic">"{r.review}"</p>
+                    <p className="text-sm md:text-lg lg:text-base text-gray-700 mb-4 md:mb-5 lg:mb-4 leading-relaxed italic">"{r.review}"</p>
                     <div className="font-bold text-primary text-sm md:text-base lg:text-sm">{r.name}</div>
                     <div className="text-gray-500 text-xs md:text-sm lg:text-xs">{r.location}</div>
                 </motion.div>
