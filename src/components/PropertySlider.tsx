@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { projects } from "../data";
 import { ChevronLeft, ChevronRight, MapPin, Ruler, Bed } from "lucide-react";
 
-export default function PropertySlider({ onSelect }: { onSelect: (p: any) => void }) {
+export default function PropertySlider({ projects, onSelect }: { projects: any[], onSelect: (p: any) => void }) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {

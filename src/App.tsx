@@ -7,9 +7,11 @@ import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { X } from "lucide-react";
 import Lenis from "lenis";
+import { projects } from "./data";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import PropertySearchFilter from "./components/PropertySearchFilter";
+import PropertySlider from "./components/PropertySlider";
 import Stats from "./components/Stats";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Projects from "./components/Projects";
@@ -42,6 +44,7 @@ import InvestmentPage from "./components/InvestmentPage";
 export default function App() {
   const [loading, setLoading] = useState(true);
   const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [filteredProjects, setFilteredProjects] = useState(projects);
   const [currentPage, setCurrentPage] = useState('home');
   const [compareList, setCompareList] = useState<any[]>([]);
   const [showCompare, setShowCompare] = useState(false);
@@ -90,7 +93,8 @@ export default function App() {
             <>
               <FloatingElements />
               <Hero onNavigate={handleNavigate} />
-              <PropertySearchFilter />
+              <PropertySearchFilter projects={projects} onFilter={setFilteredProjects} />
+              <PropertySlider projects={filteredProjects} onSelect={setSelectedProject} />
               <Stats />
               <WhyChooseUs />
               <Projects 

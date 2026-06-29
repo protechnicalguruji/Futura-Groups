@@ -1,12 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Search } from "lucide-react";
 import { motion } from "motion/react";
 
-export default function PropertySearchFilter() {
-  const [priceRange, setPriceRange] = useState(25);
+export default function PropertySearchFilter({ projects, onFilter }: { projects: any[], onFilter: (f: any[]) => void }) {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [type, setType] = useState("All Types");
+  const [city, setCity] = useState("All Cities");
+  const [priceRange, setPriceRange] = useState(50);
   const [selectedBhk, setSelectedBhk] = useState<string | null>(null);
 
-  const bhkOptions = ["1 BHK", "1.5 BHK", "2 BHK", "2.5 BHK", "3 BHK", "3.5 BHK", "4 BHK", "4.5 BHK", "5 BHK"];
+  useEffect(() => {
+    const filtered = projects.filter(p => {
+      const matchesSearch = p.name.toLowerCase().includes(searchTerm.toLowerCase()) || p.location.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesType = type === "All Types" || p.category === type;
+      const matchesCity = city === "All Cities" || p.location === city;
+      const matchesPrice = p.priceVal <= priceRange;
+      const matchesBhk = !selectedBhk || (p.bedrooms > 0 && p.bedrooms === parseInt(selectedBhk));
+      
+      return matchesSearch && matchesType && matchesCity && matchesPrice && matchesBhk;
+    });
+    onFilter(filtered);
+  }, [searchTerm, type, city, priceRange, selectedBhk, projects, onFilter]);
+
+  const bhkOptions = ["1", "2", "3", "4", "5"];
 
   return (
     <section className="py-12 bg-gray-50 border-b border-gray-200 relative z-30">
@@ -22,6 +38,8 @@ export default function PropertySearchFilter() {
             <input 
               type="text" 
               placeholder="Search by project name, location..." 
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-200 focus:outline-none focus:border-accent text-gray-700"
             />
           </div>
@@ -29,28 +47,32 @@ export default function PropertySearchFilter() {
           <div className="flex flex-col lg:flex-row gap-6">
             <div className="flex-1 flex flex-col md:flex-row gap-6">
               <div className="flex-1">
-                <select className="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:border-accent bg-white text-gray-700 appearance-none">
+                <select value={type} onChange={(e) => setType(e.target.value)} className="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:border-accent bg-white text-gray-700 appearance-none">
                   <option>All Types</option>
-                  <option>Apartments</option>
+                  <option>Luxury Apartments</option>
                   <option>Villas</option>
                   <option>Plots</option>
                   <option>Commercial</option>
                 </select>
               </div>
               <div className="flex-1">
-                <select className="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:border-accent bg-white text-gray-700 appearance-none">
+                <select value={city} onChange={(e) => setCity(e.target.value)} className="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:border-accent bg-white text-gray-700 appearance-none">
                   <option>All Cities</option>
-                  <option>Bengaluru</option>
-                  <option>Mumbai</option>
-                  <option>Delhi</option>
+                  <option>North Bengaluru</option>
+                  <option>Nagawara</option>
+                  <option>Hebbal</option>
+                  <option>Yelahanka</option>
+                  <option>Whitefield</option>
+                  <option>Electronic City</option>
+                  <option>Devenahalli</option>
                 </select>
               </div>
             </div>
 
             <div className="flex-1 bg-gray-50 p-6 rounded-xl border border-gray-200">
               <div className="flex justify-between items-center mb-4">
-                <span className="text-xs font-bold tracking-widest uppercase text-accent">Price Range</span>
-                <span className="font-bold text-primary">₹0 - ₹{priceRange} Cr</span>
+                <span className="text-xs font-bold tracking-widest uppercase text-accent">Max Price</span>
+                <span className="font-bold text-primary">₹{priceRange} Cr</span>
               </div>
               <input 
                 type="range" 
@@ -75,14 +97,10 @@ export default function PropertySearchFilter() {
                       : 'bg-white text-gray-600 border-gray-200 hover:border-accent hover:text-accent'
                   }`}
                 >
-                  {bhk}
+                  {bhk} BHK
                 </button>
               ))}
             </div>
-
-            <button className="w-full lg:w-auto px-10 py-4 bg-[#c89b4f] hover:bg-[#b08845] text-white rounded-xl font-bold transition-all shadow-md">
-              Search Properties
-            </button>
           </div>
         </div>
       </div>
