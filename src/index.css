@@ -29,3 +29,11 @@
     @apply overflow-x-hidden w-full max-w-full bg-background text-text;
   }
 }
+
+@utility no-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

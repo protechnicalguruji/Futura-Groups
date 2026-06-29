@@ -9,6 +9,7 @@ import { X } from "lucide-react";
 import Lenis from "lenis";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import PropertySearchFilter from "./components/PropertySearchFilter";
 import Stats from "./components/Stats";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Projects from "./components/Projects";
@@ -89,6 +90,7 @@ export default function App() {
             <>
               <FloatingElements />
               <Hero onNavigate={handleNavigate} />
+              <PropertySearchFilter />
               <Stats />
               <WhyChooseUs />
               <Projects 
