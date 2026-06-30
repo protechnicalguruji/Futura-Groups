@@ -29,6 +29,7 @@ import MapSection from "./components/MapSection";
 import FAQ from "./components/FAQ";
 import FinalCTA from "./components/FinalCTA";
 import FloatingElements from "./components/FloatingElements";
+import MobileActionBar from "./components/MobileActionBar";
 import Newsletter from "./components/Newsletter";
 import Gallery from "./components/Gallery";
 import Blog from "./components/Blog";
@@ -84,7 +85,7 @@ export default function App() {
   return (
     <>
       {loading && <LoadingScreen onComplete={() => setLoading(false)} />}
-      <main className="bg-background min-h-screen overflow-x-hidden w-full relative">
+      <main className="bg-background min-h-screen overflow-x-hidden w-full relative pb-[calc(76px+env(safe-area-inset-bottom))] md:pb-0">
         <Navbar onNavigate={handleNavigate} />
         {selectedProject ? (
           <ProjectDetails project={selectedProject} onBack={() => setSelectedProject(null)} onSelect={setSelectedProject} />
@@ -188,6 +189,7 @@ export default function App() {
           projects={compareList}
           onRemove={toggleCompare}
         />
+        <MobileActionBar />
       </main>
     </>
   );
